@@ -1,0 +1,72 @@
+<svg width="100%" height="100%" id="progress-bar" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="100%" height="100%" stroke="none" stroke-width="0" fill="#171526" id="rect"/><rect x="0" y="0" width="100%" height="1" stroke="none" stroke-width="0" fill="#fff" id="line-top"/><rect x="0" y="0" width="100%" height="1" stroke="none" stroke-width="0" fill="#fff" id="line-bottom"/><svg x="0" y="0" width="100%" height="100%" id="left" preserveAspectRatio="xMinYMid" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_91_573)"><mask id="mask0_91_573" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="20"><path d="M8.941.516A2.12 2.12 0 0 1 10.311 0h66.618c1.306 0 2.354 1.243 2.315 2.747l-.209 8.003c-.02.792-.346 1.532-.888 2.02l-7.398 6.664c-.407.367-.91.566-1.426.566H2.316C1.036 20 0 18.806 0 17.333V9.416c0-.85.352-1.648.947-2.15L8.94.515Z" fill="#1AB641"/></mask><g id="height-1" mask="url(#mask0_91_573)"><path d="M11 0H0v20h11V0Z" fill="#fff"/></g><g id="height-2" clip-path="url(#clip1_91_573)"><mask id="mask1_91_573" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="73" height="18"><path d="M9.129 1.464A1.938 1.938 0 0 1 10.373 1h60.563c1.187 0 2.14 1.119 2.104 2.472l-.19 7.203c-.019.713-.315 1.379-.807 1.818l-6.726 5.997c-.37.33-.826.51-1.296.51H3.105C1.943 19 1 17.925 1 16.6V9.474c0-.764.32-1.483.86-1.935l7.27-6.075Z" fill="#1AB641"/></mask><g mask="url(#mask1_91_573)"><path d="M11 1H1v18h10V1Z" fill="#171526"/></g></g></g><defs><clipPath id="clip0_91_573"><path fill="#171526" d="M0 0h11v20H0z"/></clipPath><clipPath id="clip1_91_573"><path fill="#171526" transform="translate(1 1)" d="M0 0h10v18H0z"/></clipPath></defs></svg><svg width="100%" height="100%" id="rigth" preserveAspectRatio="xMaxYMid" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_91_574)"><mask id="mask0_91_574" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-69" y="0" width="80" height="20"><path d="M2.059 19.484A2.12 2.12 0 0 1 .689 20h-66.618c-1.306 0-2.354-1.243-2.315-2.747l.209-8.003c.02-.792.346-1.532.888-2.02l7.398-6.664A2.132 2.132 0 0 1-58.323 0H8.684C9.964 0 11 1.194 11 2.667v7.917c0 .85-.351 1.648-.947 2.15l-7.994 6.75Z" fill="#1AB641"/></mask><g mask="url(#mask0_91_574)"><path d="M0 20h11V0H0v20Z" fill="#fff"/></g><g clip-path="url(#clip1_91_574)"><mask id="mask1_91_574" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-63" y="1" width="73" height="18"><path d="M1.871 18.536A1.938 1.938 0 0 1 .627 19h-60.563c-1.187 0-2.14-1.119-2.104-2.472l.19-7.203c.019-.713.315-1.379.808-1.818l6.724-5.997c.37-.33.827-.51 1.297-.51H7.895C9.057 1 10 2.075 10 3.4v7.126c0 .764-.32 1.483-.86 1.935l-7.27 6.075Z" fill="#1AB641"/></mask><g mask="url(#mask1_91_574)"><path d="M0 19h10V1H0v18Z" fill="#171526"/></g></g></g><defs><clipPath id="clip0_91_574"><path fill="#171526" transform="rotate(180 5.5 10)" d="M0 0h11v20H0z"/></clipPath><clipPath id="clip1_91_574"><path fill="#171526" transform="rotate(180 5 9.5)" d="M0 0h10v18H0z"/></clipPath></defs></svg><svg width="100%" height="100%" id="left-bar" preserveAspectRatio="xMinYMid" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_91_558)"><mask id="mask0_91_558" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="73" height="18"><path d="M8.129.464A1.938 1.938 0 0 1 9.373 0h60.563c1.187 0 2.14 1.119 2.104 2.472l-.19 7.203c-.019.713-.315 1.379-.807 1.818l-6.726 5.997c-.37.33-.826.51-1.296.51H2.105C.943 18 0 16.925 0 15.6V8.474C0 7.71.32 6.991.86 6.54L8.13.464Z" fill="#1AB641"/></mask><g mask="url(#mask0_91_558)"><path d="M10 0H0v18h10V0Z" fill="#1AB641"/></g></g><defs><clipPath id="clip0_91_558"><path fill="#1AB641" d="M0 0h10v18H0z"/></clipPath></defs></svg><svg width="100%" height="100%" id="right-bar" preserveAspectRatio="xMinYMid" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_99_613)"><mask id="mask0_99_613" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-63" y="0" width="73" height="18"><path d="M1.871 17.536A1.938 1.938 0 0 1 .627 18h-60.563c-1.187 0-2.14-1.119-2.104-2.472l.19-7.203c.019-.713.315-1.379.808-1.818L-54.319.51c.37-.33.827-.51 1.297-.51H7.895C9.057 0 10 1.075 10 2.4v7.126c0 .764-.32 1.483-.86 1.935l-7.27 6.075Z" fill="#1AB641"/></mask><g mask="url(#mask0_99_613)"><path d="M0 18h10V0H0v18Z" fill="#1AB641"/></g></g><defs><clipPath id="clip0_99_613"><path fill="#1AB641" transform="rotate(180 5 9)" d="M0 0h10v18H0z"/></clipPath></defs></svg><rect x="0" y="0" width="100%" height="100%" stroke="none" stroke-width="0" fill="#1AB641" id="rect-bar"/><text x="20" y="35" id="text-percent" class="text-percent" font-family="sf-pro-display', sans-serif, Arial" font-size="10" font-weight="700" fill="#fff">100%</text><script type="text/javascript">const getParams = () =&gt; {
+                const [, ...paramsStr] = document.defaultView.location.href.split(&quot;?&quot;)                
+                const params = paramsStr.toString().split(&apos;,&apos;)
+                return params.map(el =&gt; {
+                    const [param = &apos;&apos;, value = &apos;&apos;] = el.split(&apos;=&apos;)
+                    return {param, value}
+                })
+            }
+        
+            const rect = document.getElementById(&quot;rect&quot;)
+            const topLine = document.getElementById(&quot;line-top&quot;)
+            const bottomLine = document.getElementById(&quot;line-bottom&quot;)
+            const leftPart = document.getElementById(&quot;left&quot;)
+            const rightPart = document.getElementById(&quot;right&quot;)
+            const container = document.getElementById(&quot;progress-bar&quot;)
+
+
+            const {width: widthContainer, height: heightContainer} = container.getBoundingClientRect()
+            const {width: widthPart, height: heightPart} = leftPart.getBoundingClientRect()
+
+            const {height: height1} = document.getElementById(&apos;height-1&apos;).getBoundingClientRect()
+            const {height: height2} = document.getElementById(&apos;height-2&apos;).getBoundingClientRect()
+            
+            const heightLine = Math.abs(height2 - height1) / 2
+
+
+            topLine.setAttribute(&apos;height&apos;, heightLine + 0.1 + &apos;px&apos;)
+            topLine.setAttribute(&apos;x&apos;, widthPart - 0.1)
+            topLine.setAttribute(&apos;width&apos;, widthContainer - widthPart * 2 + 0.2)
+
+            bottomLine.setAttribute(&apos;height&apos;, heightLine + 0.1 + &apos;px&apos;)
+            bottomLine.setAttribute(&apos;x&apos;, widthPart - 0.1)
+            bottomLine.setAttribute(&apos;y&apos;, Math.max(height2, height1) - heightLine)
+            bottomLine.setAttribute(&apos;width&apos;, widthContainer - widthPart * 2 + 0.2)
+
+            rect.setAttribute(&apos;width&apos;, widthContainer - widthPart * 2 + 0.2)
+            rect.setAttribute(&apos;x&apos;, widthPart - 0.1)
+
+
+
+
+            const rectBar = document.getElementById(&apos;rect-bar&apos;)
+            const leftBar = document.getElementById(&apos;left-bar&apos;)
+            const rightBar = document.getElementById(&apos;right-bar&apos;)
+            const textPercent = document.getElementById(&apos;text-percent&apos;)
+
+            const calcWidthBar = (percentValue) =&gt; {
+                textPercent.textContent = percentValue + &apos;%&apos;
+                const widthBar = Math.max((widthContainer - widthPart * 2) * percentValue / 100, 14)
+
+                leftBar.setAttribute(&apos;x&apos;, heightLine)
+                leftBar.setAttribute(&apos;y&apos;, heightLine)
+                leftBar.setAttribute(&apos;height&apos;, heightPart - 2*heightLine)
+
+                rightBar.setAttribute(&apos;x&apos;, widthBar + widthPart - 0.1)
+                rightBar.setAttribute(&apos;y&apos;, heightLine)
+                rightBar.setAttribute(&apos;height&apos;, heightPart - 2*heightLine)
+
+                rectBar.setAttribute(&apos;width&apos;, widthBar + 0.2)
+                rectBar.setAttribute(&apos;x&apos;, widthPart - 0.1)
+                rectBar.setAttribute(&apos;y&apos;, heightLine)
+                rectBar.setAttribute(&apos;height&apos;, heightPart - 2*heightLine)
+
+                const {height: heightText, width: widthText}  = textPercent.getBoundingClientRect()
+                textPercent.setAttribute(&apos;x&apos;, heightLine + widthPart + widthBar - widthText)
+                textPercent.setAttribute(&apos;y&apos;, heightPart / 2 + heightText / 2 - 2*heightLine)
+                
+            }    
+
+
+
+            calcWidthBar(100)</script></svg>

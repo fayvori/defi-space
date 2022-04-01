@@ -1,0 +1,204 @@
+<svg width="100%" height="100%" id="progress-bar" 
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+        <rect  
+            x="0" 
+            y="0" 
+            width="100%" 
+            height="100%" 
+            stroke='none'
+            stroke-width='0'
+            fill="#020202"
+            id="rect"
+        >
+        </rect>
+
+        <rect  
+            x="0" 
+            y="0" 
+            width="100%" 
+            height="1" 
+            stroke='none'
+            stroke-width='0'
+            fill="#807F80"
+            id="line-top"
+        >
+        </rect>    
+
+        <rect  
+            x="0" 
+            y="0" 
+            width="100%" 
+            height="1" 
+            stroke='none'
+            stroke-width='0'
+            fill="#807F80"
+            id="line-bottom"
+        >
+        </rect>     
+
+        <svg x="0" y="0" width="100%" height="100%" id='left' preserveAspectRatio="xMinYMid" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_91_573)">
+            <mask id="mask0_91_573" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="20">
+            <path d="M8.94135 0.516053C9.33845 0.180769 9.81812 0 10.3106 0H76.9292C78.2354 0 79.2832 1.24335 79.244 2.74685L79.035 10.7502C79.0144 11.542 78.6885 12.2823 78.1467 12.7704L70.7492 19.4337C70.3422 19.8007 69.8397 20 69.3227 20H2.31579C1.03681 20 0 18.8061 0 17.3333V9.416C0 8.56647 0.351546 7.76773 0.946557 7.2654L8.94135 0.516053Z" fill="#1AB641"/>
+            </mask>
+            <g id="height-1" mask="url(#mask0_91_573)">
+            <path d="M11 0H0V20H11V0Z" fill="#807F80"/>
+            </g>
+            <g id="height-2" clip-path="url(#clip1_91_573)">
+            <mask id="mask1_91_573" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="73" height="18">
+            <path d="M9.1285 1.46445C9.4895 1.16269 9.92556 1 10.3733 1H70.9356C72.1231 1 73.0756 2.11902 73.04 3.47217L72.85 10.6752C72.8312 11.3878 72.535 12.054 72.0425 12.4934L65.3175 18.4904C64.9475 18.8206 64.4906 19 64.0206 19H3.10526C1.94256 19 1 17.9255 1 16.6V9.4744C1 8.70982 1.31959 7.99096 1.86051 7.53886L9.1285 1.46445Z" fill="#1AB641"/>
+            </mask>
+            <g mask="url(#mask1_91_573)">
+            <path d="M11 1H1V19H11V1Z" fill="#020202"/>
+            </g>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_91_573">
+            <rect width="11" height="20" fill="#020202"/>
+            </clipPath>
+            <clipPath id="clip1_91_573">
+            <rect width="10" height="18" fill="#020202" transform="translate(1 1)"/>
+            </clipPath>
+            </defs>
+        </svg>
+
+        <svg width="100%" height="100%" id="rigth" preserveAspectRatio="xMaxYMid" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_91_574)">
+            <mask id="mask0_91_574" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-69" y="0" width="80" height="20">
+            <path d="M2.05865 19.4839C1.66155 19.8192 1.18188 20 0.689425 20L-65.9292 20C-67.2354 20 -68.2832 18.7567 -68.244 17.2532L-68.035 9.24981C-68.0144 8.45801 -67.6885 7.71774 -67.1468 7.22961L-59.7492 0.566272C-59.3422 0.199339 -58.8397 5.50953e-06 -58.3227 5.46434e-06L8.68421 -3.93594e-07C9.96319 -5.05405e-07 11 1.19393 11 2.66667L11 10.584C11 11.4335 10.6485 12.2323 10.0534 12.7346L2.05865 19.4839Z" fill="#1AB641"/>
+            </mask>
+            <g mask="url(#mask0_91_574)">
+            <path d="M0 20L11 20L11 -5.96046e-07L-1.74846e-06 3.65604e-07L0 20Z" fill="#807F80"/>
+            </g>
+            <g clip-path="url(#clip1_91_574)">
+            <mask id="mask1_91_574" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-63" y="1" width="73" height="18">
+            <path d="M1.8715 18.5356C1.5105 18.8373 1.07444 19 0.62675 19L-59.9356 19C-61.1231 19 -62.0756 17.881 -62.04 16.5278L-61.85 9.32483C-61.8313 8.61221 -61.535 7.94597 -61.0425 7.50665L-54.3175 1.50964C-53.9475 1.1794 -53.4906 1 -53.0206 1L7.89474 0.999999C9.05744 0.999999 10 2.07454 10 3.4L10 10.5256C10 11.2902 9.68041 12.009 9.13949 12.4611L1.8715 18.5356Z" fill="#1AB641"/>
+            </mask>
+            <g mask="url(#mask1_91_574)">
+            <path d="M0 19L10 19L10 0.999999L-1.57361e-06 1L0 19Z" fill="#020202"/>
+            </g>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_91_574">
+            <rect width="11" height="20" fill="#020202" transform="translate(11 20) rotate(180)"/>
+            </clipPath>
+            <clipPath id="clip1_91_574">
+            <rect width="10" height="18" fill="#020202" transform="translate(10 19) rotate(180)"/>
+            </clipPath>
+            </defs>
+        </svg>
+
+        <!-- <svg width="100%" height="100%" id="left-bar" preserveAspectRatio="xMinYMid" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_91_558)">
+            <mask id="mask0_91_558" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="73" height="18">
+            <path d="M8.1285 0.464447C8.4895 0.162692 8.92556 0 9.37325 0H69.9356C71.1231 0 72.0756 1.11902 72.04 2.47217L71.85 9.67518C71.8312 10.3878 71.535 11.054 71.0425 11.4934L64.3175 17.4904C63.9475 17.8206 63.4906 18 63.0206 18H2.10526C0.942556 18 0 16.9255 0 15.6V8.4744C0 7.70982 0.319587 6.99096 0.860506 6.53886L8.1285 0.464447Z" fill="#1AB641"/>
+            </mask>
+            <g mask="url(#mask0_91_558)">
+            <path d="M10 0H0V18H10V0Z" fill="#1AB641"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_91_558">
+            <rect width="10" height="18" fill="#1AB641"/>
+            </clipPath>
+            </defs>
+        </svg>
+
+        <svg width="100%" height="100%" id="right-bar" preserveAspectRatio="xMinYMid" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_99_613)">
+            <mask id="mask0_99_613" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-63" y="0" width="73" height="18">
+            <path d="M1.8715 17.5356C1.5105 17.8373 1.07444 18 0.62675 18L-59.9356 18C-61.1231 18 -62.0756 16.881 -62.04 15.5278L-61.85 8.32483C-61.8313 7.61221 -61.535 6.94597 -61.0425 6.50665L-54.3175 0.509645C-53.9475 0.179405 -53.4906 4.83527e-06 -53.0206 4.79418e-06L7.89474 -5.31208e-07C9.05744 -6.32855e-07 10 1.07454 10 2.4L10 9.5256C10 10.2902 9.68041 11.009 9.13949 11.4611L1.8715 17.5356Z" fill="#1AB641"/>
+            </mask>
+            <g mask="url(#mask0_99_613)">
+            <path d="M0 18L10 18L10 -7.15256e-07L-1.57361e-06 1.58972e-07L0 18Z" fill="#1AB641"/>
+            </g>
+            </g>
+            <defs>
+            <clipPath id="clip0_99_613">
+            <rect width="10" height="18" fill="#1AB641" transform="translate(10 18) rotate(180)"/>
+            </clipPath>
+            </defs>
+        </svg>
+
+        <rect  
+            x="0" 
+            y="0" 
+            width="100%" 
+            height="100%" 
+            stroke='none'
+            stroke-width='0'
+            fill="#1AB641"
+            id="rect-bar"
+        >            
+        </rect> -->
+
+    <script type="text/javascript">
+            const getParams = () => {
+                const [, ...paramsStr] = document.defaultView.location.href.split("?")                
+                const params = paramsStr.toString().split(',')
+                return params.map(el => {
+                    const [param = '', value = ''] = el.split('=')
+                    return {param, value}
+                })
+            }
+        
+            const rect = document.getElementById("rect")
+            const topLine = document.getElementById("line-top")
+            const bottomLine = document.getElementById("line-bottom")
+            const leftPart = document.getElementById("left")
+            const rightPart = document.getElementById("right")
+            const container = document.getElementById("progress-bar")
+
+
+            const {width: widthContainer, height: heightContainer} = container.getBoundingClientRect()
+            const {width: widthPart, height: heightPart} = leftPart.getBoundingClientRect()
+
+            const {height: height1} = document.getElementById('height-1').getBoundingClientRect()
+            const {height: height2} = document.getElementById('height-2').getBoundingClientRect()
+            
+            const heightLine = Math.abs(height2 - height1) / 2
+
+
+            topLine.setAttribute('height', heightLine + 'px')
+            topLine.setAttribute('x', widthPart - 1)
+            topLine.setAttribute('width', widthContainer - widthPart * 2 + 2)
+
+            bottomLine.setAttribute('height', heightLine + 'px')
+            bottomLine.setAttribute('x', widthPart - 1)
+            bottomLine.setAttribute('y', Math.max(height2, height1) - heightLine)
+            bottomLine.setAttribute('width', widthContainer - widthPart * 2 + 2)
+
+            rect.setAttribute('width', widthContainer - widthPart * 2 + 2)
+            rect.setAttribute('x', widthPart - 1)
+
+
+
+
+            <!-- const rectBar = document.getElementById('rect-bar')
+            const leftBar = document.getElementById('left-bar')
+            const rightBar = document.getElementById('right-bar')
+
+            const calcWidthBar = (percentValue) => {
+                const widthBar = Math.max((widthContainer - widthPart * 2) * percentValue / 100, 14)
+
+                leftBar.setAttribute('x', heightLine)
+                leftBar.setAttribute('y', heightLine)
+                leftBar.setAttribute('height', heightPart - 2*heightLine)
+
+                rightBar.setAttribute('x', widthBar + widthPart - 0.1)
+                rightBar.setAttribute('y', heightLine)
+                rightBar.setAttribute('height', heightPart - 2*heightLine)
+
+                rectBar.setAttribute('width', widthBar + 2)
+                rectBar.setAttribute('x', widthPart - 1)
+                rectBar.setAttribute('y', heightLine)
+                rectBar.setAttribute('height', heightPart - 2*heightLine)
+            }    
+            calcWidthBar(100)  -->
+
+    </script>        
+</svg>
