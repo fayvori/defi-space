@@ -7508,6 +7508,7 @@ main {
 }
 
 .table-new .table__body-card .table__main .company-col .about-info__text--paragraph {
+  white-space: pre-line;
   margin-bottom: 20px;
 }
 

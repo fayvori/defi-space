@@ -1,7 +1,10 @@
 import {Accordion} from "../components/Accordion";
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 import WalletIcon from '../assets/crm_images/src/wallet-icon.svg'
+import {CurrencyAccordion} from "../components/CurrencyAccordion";
+import {CurrencyMyPortfolioTab} from "../components/tabs/CurrencyMyPortfolioTab";
+import {InvestProjectTab} from "../components/tabs/InvestProjectTab";
 
 const accordions = [
     {
@@ -64,10 +67,10 @@ export const Invest = () => {
                 </div>
             </section>
 
+
             <section>
-                {accordions.map(el => (
-                    <Accordion completed={el.completed} timedOut={el.timedOut} />
-                ))}
+                {/*<CurrencyMyPortfolioTab />*/}
+                <InvestProjectTab />
             </section>
         </>
     )

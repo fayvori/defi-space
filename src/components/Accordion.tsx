@@ -11,7 +11,7 @@ import Collapsible from "react-collapsible";
 import {useState} from "react";
 
 type AccordionCloseProps = {
-    close: () => void
+    close: () => void;
 }
 
 const AccordionStep1 = (props: AccordionProps) => {
@@ -25,14 +25,14 @@ const AccordionStep1 = (props: AccordionProps) => {
                 <div className="table-data round-col">
                     <span className="title-col">Round</span>
                     <div className="content">
-                        <span className="text text-subtitle">Round B, Price - 0.24$</span>
+                        <span className="text text-subtitle">{`Round ${props.projectInfo.round}, Price - ${props.projectInfo.price}$`}</span>
                     </div>
                 </div>
                 <div className="table-data vesting-col">
                     <span className="title-col">Vesting</span>
                     <div className="content">
-                        <span className="text text-subtitle">5% TGE</span>
-                        <span className="text">Then 10% monthly </span>
+                        <span className="text text-subtitle">{`${props.projectInfo.vesting_percent} ${props.projectInfo.vesting_tag.name}`}</span>
+                        <span className="text">{`Then ${props.projectInfo.percent_monthly}% monthly`}</span>
                     </div>
                 </div>
                 <div className="table-data ido-col">
@@ -40,13 +40,13 @@ const AccordionStep1 = (props: AccordionProps) => {
                     <div className="content">
                                                 <span
                                                     className="text text-subtitle">Ведутся переговоры с площадками:</span>
-                        <span className="text">CoinList, DaoMaker, Polkastarter, Impossible Finance.</span>
+                        <span className="text">{`${props.projectInfo.platforms.map((el: any) => el.name).join(", ")}`}</span>
                     </div>
                 </div>
                 <div className="table-data investors-col">
                     <span className="title-col">Investors</span>
                     <div className="content">
-                        <span className="text text-subtitle">SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, SHIMA CAPITAL, Huobi Ventures, Huobi Ventures, </span>
+                        <span className="text text-subtitle">{`${props.projectInfo.investors.map((el: any) => el.name).join(", ")}`}</span>
                     </div>
                 </div>
                 <div className="table-data allocation-col">
@@ -187,10 +187,11 @@ type AccordionProps = {
     completed: number;
     timedOut: boolean;
     close?: () => void;
+    projectInfo: any;
 }
 
 // render accordion heading
-const renderTrigger = (isOpen: boolean) => {
+const renderTrigger = (isOpen: boolean, image: string) => {
     return (
         <>
             {!isOpen ? (
@@ -199,7 +200,7 @@ const renderTrigger = (isOpen: boolean) => {
                     <div className="table__head">
                         <div className="table__head-data company-col">
                             <div className="logo-wrap">
-                                <img src={LogoCur} alt="" className="logo-img"/>
+                                <img src={image} alt="" className="logo-img"/>
                             </div>
                             <div className="info">
                                 <span className="info-title title-company">DeFiYield</span>
@@ -244,7 +245,7 @@ export const Accordion = (props: AccordionProps) => {
                 <div className="table">
                     <div className="table__body">
                         <Collapsible
-                            trigger={renderTrigger(isOpen)}
+                            trigger={renderTrigger(isOpen, props.projectInfo.image)}
                             onOpening={() => setIsOpen(true)}
                             onClosing={() => setIsOpen(false)}
                             open={isOpen}
@@ -256,29 +257,15 @@ export const Accordion = (props: AccordionProps) => {
                                     <div className="company-col">
                                         <div className="company-top">
                                             <div className="logo-wrap">
-                                                <img src={LogoCur} alt="" className="logo"/>
+                                                <img src={props.projectInfo.image} alt="" className="logo"/>
                                             </div>
                                             <div className="info">
-                                                <span className="info__title">DeFiYield</span>
-                                                <a href="#" target="_blank" className="info__link">defiyield.app</a>
+                                                <span className="info__title">{props.projectInfo.name}</span>
+                                                <a href="#" target="_blank" className="info__link">{props.projectInfo.url}</a>
                                             </div>
                                         </div>
                                         <div className="about-info">
-                                            <p className="about-info__text about-info__text--paragraph">DeFiYield - это
-                                                первая межцепочечная децентрализованная сеть безопасности, выполняющая
-                                                задачу сделать пространство DeFi безопаснее для всех.</p>
-                                            <p className="about-info__text about-info__text--paragraph">Наши два
-                                                революционных инструмента обеспечивают легкость, безопасность и
-                                                уверенность
-                                                при инвестировании.</p>
-                                            <p className="about-info__text">Панель управления активами (уже работает в
-                                                14
-                                                сетях, скоро также на Solana, Terra, Cosmos)</p>
-                                            <p className="about-info__text">Просматривайте эффективность своего портфеля
-                                                как
-                                                профессионал</p>
-                                            <p className="about-info__text">Включая активы, позиции, прибыль и убыток,
-                                                калькулятор непостоянных убытков, обзор пулов и другие.</p>
+                                            <p className="about-info__text about-info__text--paragraph">{`${props.projectInfo.description}`}</p>
                                         </div>
                                         <div className="socials">
                                             <span className="socials__title">Social</span>
@@ -313,7 +300,7 @@ export const Accordion = (props: AccordionProps) => {
 
                                     <StepsProvider>
                                         <Steps>
-                                            <AccordionStep1 completed={props.completed} timedOut={props.timedOut} close={close} />
+                                            <AccordionStep1 completed={props.completed} timedOut={props.timedOut} close={close}  projectInfo={props.projectInfo} />
                                             <AccordionStep2 close={close} />
                                             <AccordionStep3 close={close} />
                                         </Steps>
