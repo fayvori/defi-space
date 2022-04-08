@@ -34,8 +34,8 @@ const AccordionStep1 = (props: AccordionProps) => {
                     <span className="title-col">Vesting</span>
                     <div className="content">
                         <span
-                            className="text text-subtitle">{`${props.projectInfo.vesting_percent} ${props.projectInfo.vesting_tag.name}`}</span>
-                        <span className="text">{`Then ${props.projectInfo.percent_monthly}% monthly`}</span>
+                            className="text text-subtitle">{`${props.projectInfo.vesting}`}</span>
+                        {/*<span className={"text text-subtitle"}>{`${props.projectInfo.vesting}`}</span>*/}
                     </div>
                 </div>
                 <div className="table-data ido-col">
@@ -44,14 +44,14 @@ const AccordionStep1 = (props: AccordionProps) => {
                                                 <span
                                                     className="text text-subtitle">Ведутся переговоры с площадками:</span>
                         <span
-                            className="text">{`${props.projectInfo.platforms.map((el: any) => el.name).join(", ")}`}</span>
+                            className="text">{`${props.projectInfo.ido}`}</span>
                     </div>
                 </div>
                 <div className="table-data investors-col">
                     <span className="title-col">Investors</span>
                     <div className="content">
                         <span
-                            className="text text-subtitle">{`${props.projectInfo.investors.map((el: any) => el.name).join(", ")}`}</span>
+                            className="text text-subtitle">{`${props.projectInfo.investors}`}</span>
                     </div>
                 </div>
                 <div className="table-data allocation-col">
@@ -215,8 +215,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                         <div className="table__head-data vesting-col">
                             <div className="info">
                                 <span
-                                    className="info-title">{`${projInfo.vesting_percent} ${projInfo.vesting_tag.name}`}</span>
-                                <span className="info__short">{`Then ${projInfo.percent_monthly}% monthly`}</span>
+                                    className="info-title">{`${projInfo.vesting}`}</span>
                             </div>
                         </div>
                         <div className="table__head-data ido-col">
@@ -264,7 +263,7 @@ export const Accordion = (props: AccordionProps) => {
                                             <div className="info">
                                                 <span className="info__title">{props.projectInfo.name}</span>
                                                 <a href="#" target="_blank"
-                                                   className="info__link">{props.projectInfo.url}</a>
+                                                   className="info__link">{props.projectInfo.project_site}</a>
                                             </div>
                                         </div>
                                         <div className="about-info">
@@ -312,7 +311,7 @@ export const Accordion = (props: AccordionProps) => {
                                     <StepsProvider>
                                         <Steps>
                                             <AccordionStep1 completed={props.completed} timedOut={props.timedOut}
-                                                            close={close} projectInfo={props.projectInfo}/>
+                                                            close={close} projectInfo={props.projectInfo} />
                                             <AccordionStep2 close={close}/>
                                             <AccordionStep3 close={close}/>
                                         </Steps>

@@ -7364,12 +7364,6 @@ main {
   width: 100%
 }
 
-@media screen and (min-width: 1200px) {
-  .table-potfolio .table__body-main .table__main .exchanges-col {
-    margin-top: 20px;
-  }
-}
-
 .table-new .table__body-card .table__head-data .info {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -7390,6 +7384,7 @@ main {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
+  white-space: pre-line;
 }
 
 .table-new .table__body-card .table__head-data .info-short {
@@ -7655,7 +7650,8 @@ main {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
-  width: 100%
+  width: 100%;
+  white-space: pre-line;
 }
 
 .table-new .table__body-card .table__main .main-col .base-state .table-data .content .text--accent {

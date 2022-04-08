@@ -26,7 +26,7 @@ export const InvestProjectTab = () => {
     return (
         <>
             {data.map((el: any) => (
-                <Accordion projectInfo={el} completed={accordions[0].completed} timedOut={accordions[0].timedOut} />
+                <Accordion key={el.id} projectInfo={el} completed={accordions[0].completed} timedOut={accordions[0].timedOut} />
             ))}
         </>
     )

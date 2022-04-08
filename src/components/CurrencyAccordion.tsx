@@ -44,13 +44,13 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 </div>
                             </div>
                             <div className="table__head-data amount-col">
-                                <span className="info-title">{`$296,898 ${projInfo.short_name}`}</span>
+                                <span className="info-title">{`296,898 ${projInfo.short_name}`}</span>
                             </div>
                             <div className="table__head-data value-col">
                                 <span className="info-title">$4,360</span>
                             </div>
                             <div className="table__head-data buy-price-col">
-                                <span className="info-title">{`$${projInfo.buy_price}`}</span>
+                                <span className="info-title">{`$${projInfo.price}`}</span>
                             </div>
                             <div className="table__head-data vesting-col">
                                 <span className="info-title">{`${projInfo.vesting_months} months`}</span>
@@ -113,13 +113,13 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">$4,360</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`$${props.projInfo.buy_price}`}</span>
+                                            <span className="text">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text">{`${props.projInfo.vesting_months} months`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.vesting_percent}%`}</span>
+                                            <span className="text">{`${props.projInfo.tge_percent}%`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -136,13 +136,13 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data blockchain-col">
                                             <span className="title-col">Blockchain</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.blockchain.name}`}</span>
+                                                <span className="text">{`${props.projInfo.blockchain}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data info-col">
                                             <span className="title-col">Info</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.info}`}</span>
+                                                <span className="text">{`${props.projInfo.description}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data analysis-col">
@@ -198,8 +198,7 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data vesting-col">
                                             <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.vesting_percent}% ${props.projInfo.vesting_tag.name}`}</span>
-                                                <span className="text">{`Then ${props.projInfo.percent_monthly}% monthly`}</span>
+                                                <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
@@ -303,7 +302,7 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                 </ul>
                                                 <a className="project-link" target="_blank"
-                                                   href="#project-link">{`${props.projInfo.url}`}</a>
+                                                   href="#project-link">{`${props.projInfo.project_site}`}</a>
                                             </div>
                                         </div>
                                         <div className="table__main-data controls-col">
@@ -312,14 +311,14 @@ export const CurrencyAccordion = (props: any) => {
                                                 <div className="controls-list">
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
-                                                           href={props.projInfo.dex_link}>
+                                                           href={props.projInfo.dex_url}>
                                                             <span className="btn__text">Exchange</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
-                                                           href={props.projInfo.live_chat_link}>
+                                                           href={props.projInfo.live_chat_url}>
                                                             <span className="btn__text">Live chart</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
