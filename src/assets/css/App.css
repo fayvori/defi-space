@@ -69,26 +69,30 @@
   text-align: center;
 }
 
-/*.wallet-connect:before {*/
+.header__inner-wallet {
+
+}
+
+/*.header__inner-wallet::before {*/
 /*  background: url(../images/src/btn-angle.svg) no-repeat;*/
 /*  background-size: 100%;*/
 /*  content: "";*/
 /*  display: block;*/
 /*  height: 14px;*/
 /*  left: 0;*/
-/*  position: absolute;*/
+/*  position: relative;*/
 /*  top: 0;*/
 /*  width: 13px;*/
 /*}*/
 
-/*.wallet-connect:after {*/
+/*.header__inner-wallet::after {*/
 /*  background: url(../images/src/btn-angle.svg) no-repeat;*/
 /*  background-size: 100% 100%;*/
 /*  bottom: 0;*/
 /*  content: "";*/
 /*  display: block;*/
 /*  height: 14px;*/
-/*  position: absolute;*/
+/*  position: relative;*/
 /*  right: 0;*/
 /*  transform: rotate(180deg);*/
 /*  width: 13px;*/
@@ -6535,6 +6539,16 @@ main {
   display: none;
 }
 
+.navigation-bottom__left .menu__item {
+  user-select: none;
+  cursor: pointer;
+}
+
+.navigation-bottom__left .menu__item--active {
+  user-select: none;
+  cursor: pointer;
+}
+
 .navigation-bottom__left .menu__item:first-child {
   background: url(../images/dist/menu-btns/bg-1.svg);
   background-repeat: no-repeat;
@@ -6546,15 +6560,13 @@ main {
 }
 
 .navigation-bottom__left .menu__item:first-child.menu__item--active .menu__link {
-  background: url(../images/dist/menu-btns/bg-1-active.svg);
-  background-repeat: no-repeat;
+  background: url(../images/dist/menu-btns/bg-1-active.svg) no-repeat;
   background-size: 100% 100%;
   color: #fff;
 }
 
 .navigation-bottom__left .menu__item:first-child:hover .menu__link {
-  background: url(../images/dist/menu-btns/bg-1-active.svg);
-  background-repeat: no-repeat;
+  background: url(../images/dist/menu-btns/bg-1-active.svg) no-repeat;
   background-size: 100% 100%;
   color: #fff;
 }
@@ -6570,8 +6582,7 @@ main {
 }
 
 .navigation-bottom__left .menu__item:nth-child(2).menu__item--active .menu__link {
-  background: url(../images/dist/menu-btns/bg-2-active.svg);
-  background-repeat: no-repeat;
+  background: url(../images/dist/menu-btns/bg-2-active.svg) no-repeat;
   background-size: 100% 100%;
   color: #fff;
 }
@@ -6696,7 +6707,6 @@ main {
 .table-potfolio .table__body {
   height: 100%;
   max-height: 100%;
-  padding: 18px 0;
 }
 
 .table-potfolio .table__body-head {
@@ -6906,6 +6916,12 @@ main {
   width: 100%
 }
 
+@media screen and (min-width: 1200px) {
+  .table-potfolio .table__body-main .table__head-data .controls {
+    flex-wrap: nowrap;
+  }
+}
+
 .table-potfolio .table__body-main .table__head-data .controls .toggle-btn {
   background-color: #240c45;
   background-image: url(../images/dist/arrow-card-icon.svg);
@@ -6917,7 +6933,7 @@ main {
   display: block;
   height: 52px;
   margin-left: 30px;
-  width: 52px;
+  min-width: 52px;
 }
 
 .table-potfolio .table__body-main .table__main {
@@ -7038,6 +7054,7 @@ main {
   display: block;
   font-size: 15px;
   font-weight: 500;
+  white-space: pre-line;
 }
 
 .table-potfolio .table__body-main .table__main-data .content .text--accent {
@@ -7302,10 +7319,6 @@ main {
   margin-bottom: 10px;
 }
 
-.table-new .table__body-card:last-child {
-  margin-bottom: 0;
-}
-
 .table-new .table__body-card .table__head {
   -ms-grid-columns: 34.8% 25.7% 19.4% 20.1%;
   background: #0e0715;
@@ -7349,6 +7362,12 @@ main {
   -o-object-fit: cover;
   object-fit: cover;
   width: 100%
+}
+
+@media screen and (min-width: 1200px) {
+  .table-potfolio .table__body-main .table__main .exchanges-col {
+    margin-top: 20px;
+  }
 }
 
 .table-new .table__body-card .table__head-data .info {

@@ -1,10 +1,15 @@
 import {Accordion} from "../components/Accordion";
 import {Link} from 'react-router-dom';
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 
 import WalletIcon from '../assets/crm_images/src/wallet-icon.svg'
 import {CurrencyAccordion} from "../components/CurrencyAccordion";
 import {CurrencyMyPortfolioTab} from "../components/tabs/CurrencyMyPortfolioTab";
 import {InvestProjectTab} from "../components/tabs/InvestProjectTab";
+import {AllHistoryTab} from "../components/tabs/AllHistoryTab";
+import '../assets/css/tabs.css'
+import '../assets/css/App.css'
+import {useState} from "react";
 
 const accordions = [
     {
@@ -18,8 +23,11 @@ const accordions = [
 ]
 
 export const Invest = () => {
+    const [selectedTab, setSelectedTab] = useState(0)
+    const wallet = localStorage.getItem("wallet")
+
     return (
-        <>
+        <Tabs onSelect={index => setSelectedTab(index)}>
             <section className="navigation">
                 <div className="container">
                     <div className="navigation-top">
@@ -42,15 +50,9 @@ export const Invest = () => {
                         <div className="navigation-bottom__left">
                             <nav className="menu">
                                 <ul className="menu__list">
-                                    <li className="menu__item menu__item--active">
-                                        <a href="#" className="menu__link menu__link">New</a>
-                                    </li>
-                                    <li className="menu__item">
-                                        <a href="#" className="menu__link menu__link">My porfolio</a>
-                                    </li>
-                                    <li className="menu__item menu__item">
-                                        <a href="#" className="menu__link">All history</a>
-                                    </li>
+                                    <Tab className="menu__item menu__link">New</Tab>
+                                    <Tab className="menu__item menu__link">My portfolio</Tab>
+                                    <Tab className="menu__item menu__link">All history</Tab>
                                 </ul>
                             </nav>
                         </div>
@@ -69,9 +71,16 @@ export const Invest = () => {
 
 
             <section>
-                {/*<CurrencyMyPortfolioTab />*/}
-                <InvestProjectTab />
+                <TabPanel>
+                    <InvestProjectTab/>
+                </TabPanel>
+                <TabPanel>
+                    <CurrencyMyPortfolioTab/>
+                </TabPanel>
+                <TabPanel>
+                    <AllHistoryTab/>
+                </TabPanel>
             </section>
-        </>
+        </Tabs>
     )
 }

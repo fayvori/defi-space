@@ -13,8 +13,12 @@ import SafepallIcon from '../assets/images/src/payment-icon-Safepall.svg'
 import TrustWallet from '../assets/images/src/payment-icon-TrustWallet.svg'
 
 import '../js/app'
-import '../assets/css/app.min.css'
+import '../assets/css/App_crm.css'
 import '../assets/css/App.css'
+
+// iwthout @types
+// @ts-ignore
+import { Tab, Tabs } from 'react-tabify';
 
 import {Link} from "react-router-dom";
 
@@ -68,9 +72,11 @@ export const Home = () => {
             <header className="header">
                 <div className="container">
                     <div className="header__inner">
-                        <button className="wallet-connect d-block" d-block d-sm-none onClick={() => setIsConnectWalletModalVisible(true)}>
-                            Connect Wallet
-                        </button>
+                        <div className="header__inner-wallet">
+                            <button className="wallet-connect d-block" d-block d-sm-none onClick={() => setIsConnectWalletModalVisible(true)}>
+                                Connect Wallet
+                            </button>
+                        </div>
 
 
                         <nav className="menu d-none d-sm-flex">

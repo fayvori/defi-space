@@ -1,8 +1,16 @@
 import '../../assets/css/App.css'
-import '../../assets/css/app.min.css'
+import '../../assets/css/App_crm.css'
 import {CurrencyAccordion} from "../CurrencyAccordion";
+import useAxios from "axios-hooks";
 
 export const CurrencyMyPortfolioTab = () => {
+    const [{ data, loading, error }, refetch] = useAxios(
+        'https://backendapi.site/defi/defipool/projects/?format=json'
+    )
+
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error!</p>
+
     return (
         <section className="table-potfolio table-section">
             <div className="container">
@@ -17,9 +25,9 @@ export const CurrencyMyPortfolioTab = () => {
                         <div className="table__head-data">Withdraw</div>
                     </div>
 
-                        <CurrencyAccordion/>
-                        <CurrencyAccordion/>
-                    <div/>
+                    {data.map((el: any) => (
+                        <CurrencyAccordion projInfo={el} />
+                    ))}
                 </div>
             </div>
         </section>
