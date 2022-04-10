@@ -82,7 +82,7 @@ export const AllHistoryAccordion = (props: any) => {
 
     return (
         <section className="table-potfolio table-section">
-            <div className="container">
+            <div>
                 <div className="table">
                     <Collapsible
                         trigger={renderTrigger(isOpen, props.projInfo)}
@@ -236,13 +236,13 @@ export const AllHistoryAccordion = (props: any) => {
                                         {/*        <span className="text">$2,294 (43%)</span>*/}
                                         {/*    </div>*/}
                                         {/*</div>*/}
-                                        <div className="table__main-data next-unlock-col">
+                                        <div className="table__main-data token-locked-col">
                                             <span className="title-col">Next unlock</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.next_unlock_months} months left`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data token-locked-col">
+                                        <div className="table__main-data next-unlock-col">
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
@@ -337,7 +337,7 @@ export const AllHistoryAccordion = (props: any) => {
                                                     )}
                                                 </ul>
                                                 <a className="project-link" target="_blank"
-                                                   href="#project-link">Tron.network</a>
+                                                   href={props.projInfo.project_site}>{`${props.projInfo.project_site}`}</a>
                                             </div>
                                         </div>
                                         <div className="table__main-data controls-col">

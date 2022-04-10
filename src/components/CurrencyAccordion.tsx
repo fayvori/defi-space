@@ -84,7 +84,7 @@ export const CurrencyAccordion = (props: any) => {
 
     return (
         <section className="table-potfolio table-section">
-            <div className="container">
+            <div>
                 <div className="table">
                     <Collapsible
                         trigger={renderTrigger(isOpen, props.projInfo)}
@@ -132,7 +132,15 @@ export const CurrencyAccordion = (props: any) => {
                                         </div>
                                     </div>
                                     <div className="table__main">
-
+                                        <div className="table__main-data withdraw-col">
+                                            <span className="title-col">Withdraw</span>
+                                            <div className="content">
+                                                <button className="btn btn--green btn--claim">
+                                                    <span className="btn__text">Claim</span>
+                                                    <div className="btn__bg"></div>
+                                                </button>
+                                            </div>
+                                        </div>
                                         <div className="table__main-data blockchain-col">
                                             <span className="title-col">Blockchain</span>
                                             <div className="content">
@@ -201,13 +209,13 @@ export const CurrencyAccordion = (props: any) => {
                                                 <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data next-unlock-col">
+                                        <div className="table__main-data token-locked-col">
                                             <span className="title-col">Next unlock</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.next_unlock_months} months left`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data token-locked-col">
+                                        <div className="table__main-data next-unlock-col">
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
@@ -302,7 +310,7 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                 </ul>
                                                 <a className="project-link" target="_blank"
-                                                   href="#project-link">{`${props.projInfo.project_site}`}</a>
+                                                   href={props.projInfo.project_site}>{`${props.projInfo.project_site}`}</a>
                                             </div>
                                         </div>
                                         <div className="table__main-data controls-col">

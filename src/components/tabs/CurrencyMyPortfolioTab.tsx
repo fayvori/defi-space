@@ -12,8 +12,8 @@ export const CurrencyMyPortfolioTab = () => {
     if (error) return <p>Error!</p>
 
     return (
-        <section className="table-potfolio table-section">
-            <div className="container">
+        <section className="table-potfolio table-section container-new">
+            <div>
                 <div className="table">
                     <div className="table__head">
                         <div className="table__head-data">Tokens</div>

@@ -398,6 +398,13 @@ progress {
     --bs-body-color: #212529;
     --bs-body-bg: #fff;
 }
+
+.header__invest {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
 .container,
 .container-fluid,
 .container-lg,
@@ -4652,7 +4659,7 @@ main {
 .modal {
     height: 100%;
     overflow: auto;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1000;
 }
@@ -5571,6 +5578,26 @@ main {
 }
 
 .header__inner .wallet-connect {
+    background: red;
+    background: -webkit-gradient(linear, left top, right top, from(#9b4ff7), color-stop(96.69%, #6624b6));
+    background: -o-linear-gradient(left, #9b4ff7 0, #6624b6 96.69%);
+    background: linear-gradient(90deg, #9b4ff7, #6624b6 96.69%);
+    background-image: url(../images/dist/wallet-connect-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    outline: none;
+    padding: 6px 5px;
+    text-align: center;
+    width: 151px;
+}
+
+.header__inner-invest .wallet-connect {
     background: red;
     background: -webkit-gradient(linear, left top, right top, from(#9b4ff7), color-stop(96.69%, #6624b6));
     background: -o-linear-gradient(left, #9b4ff7 0, #6624b6 96.69%);

@@ -27,7 +27,7 @@ const AccordionStep1 = (props: AccordionProps) => {
                     <span className="title-col">Round</span>
                     <div className="content">
                         <span
-                            className="text text-subtitle">{`Round ${props.projectInfo.round}, Price - ${props.projectInfo.price}$`}</span>
+                            className="text text-subtitle">{`${props.projectInfo.round}`}</span>
                     </div>
                 </div>
                 <div className="table-data vesting-col">
@@ -41,8 +41,8 @@ const AccordionStep1 = (props: AccordionProps) => {
                 <div className="table-data ido-col">
                     <span className="title-col">IDO</span>
                     <div className="content">
-                                                <span
-                                                    className="text text-subtitle">Ведутся переговоры с площадками:</span>
+                        {/*<span*/}
+                        {/*    className="text text-subtitle">Ведутся переговоры с площадками:</span>*/}
                         <span
                             className="text">{`${props.projectInfo.ido}`}</span>
                     </div>
@@ -210,7 +210,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                             </div>
                         </div>
                         <div className="table__head-data round-col">
-                            <span className="info-title">{`Round ${projInfo.round}, Price - ${projInfo.price}$`}</span>
+                            <span className="info-title">{`${projInfo.round}`}</span>
                         </div>
                         <div className="table__head-data vesting-col">
                             <div className="info">
@@ -242,7 +242,7 @@ export const Accordion = (props: AccordionProps) => {
 
     return (
         <section className="table-new">
-            <div className="container">
+            <div className="container-new">
                 <div className="table">
                     <Collapsible
                         trigger={renderTrigger(isOpen, props.projectInfo)}
@@ -262,7 +262,8 @@ export const Accordion = (props: AccordionProps) => {
                                             </div>
                                             <div className="info">
                                                 <span className="info__title">{props.projectInfo.name}</span>
-                                                <a href="#" target="_blank"
+                                                <a href={props.projectInfo.project_site} target="_blank"
+                                                   rel="noopener noreferrer"
                                                    className="info__link">{props.projectInfo.project_site}</a>
                                             </div>
                                         </div>
@@ -274,7 +275,8 @@ export const Accordion = (props: AccordionProps) => {
                                             <ul className="socials__list">
                                                 {props.projectInfo.instagram_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link" href={props.projectInfo.instagram_link}>
+                                                        <a className="socials__item-link"
+                                                           href={props.projectInfo.instagram_link}>
                                                             <img src={InstagramIcon} alt=""
                                                                  className="socials__item-img"/>
                                                         </a>
@@ -282,7 +284,8 @@ export const Accordion = (props: AccordionProps) => {
                                                 )}
                                                 {props.projectInfo.facebook_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link" href={props.projectInfo.facebook_link}>
+                                                        <a className="socials__item-link"
+                                                           href={props.projectInfo.facebook_link}>
                                                             <img src={FacebookIcon} alt=""
                                                                  className="socials__item-img"/>
                                                         </a>
@@ -290,7 +293,8 @@ export const Accordion = (props: AccordionProps) => {
                                                 )}
                                                 {props.projectInfo.telegram_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link" href={props.projectInfo.telegram_link}>
+                                                        <a className="socials__item-link"
+                                                           href={props.projectInfo.telegram_link}>
                                                             <img src={TelegramIcon} alt=""
                                                                  className="socials__item-img"/>
                                                         </a>
@@ -298,7 +302,8 @@ export const Accordion = (props: AccordionProps) => {
                                                 )}
                                                 {props.projectInfo.twitter_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link" href={props.projectInfo.twitter_link}>
+                                                        <a className="socials__item-link"
+                                                           href={props.projectInfo.twitter_link}>
                                                             <img src={TwitterIcon} alt=""
                                                                  className="socials__item-img"/>
                                                         </a>
@@ -311,7 +316,7 @@ export const Accordion = (props: AccordionProps) => {
                                     <StepsProvider>
                                         <Steps>
                                             <AccordionStep1 completed={props.completed} timedOut={props.timedOut}
-                                                            close={close} projectInfo={props.projectInfo} />
+                                                            close={close} projectInfo={props.projectInfo}/>
                                             <AccordionStep2 close={close}/>
                                             <AccordionStep3 close={close}/>
                                         </Steps>

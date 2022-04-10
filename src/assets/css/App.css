@@ -9,6 +9,17 @@
   border-radius: 50px;
 }
 
+@media screen and (max-width: 576px) {
+  .wrapper {
+    max-width: 100%;
+  }
+}
+
+.container-new {
+  padding: 0 30px;
+  width: 100%;
+}
+
 /*.wrapper > div::before {*/
 /*  background: url(../images/src/btn-angle.svg) no-repeat;*/
 /*  background-size: 100%;*/
@@ -47,6 +58,13 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+}
+
+.header__inner-invest {
+  max-width: 770px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (max-width: 1200px) {
@@ -6487,7 +6505,7 @@ main {
   display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
-  margin-top: 60px;
+  margin-top: 75px;
 }
 
 .navigation-bottom__left .menu {
@@ -6673,7 +6691,12 @@ main {
 }
 
 .table-potfolio {
+  /*padding: 27px 30px 30px 0px;*/
   padding-top: 27px;
+}
+
+.navigation {
+  padding: 0px 30px;
 }
 
 .table-potfolio .table {
@@ -6837,9 +6860,6 @@ main {
 }
 
 .table-potfolio .table__body-main .table__head-data {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8597,8 +8617,8 @@ main {
   }
 
   .table-new .table__body-card .table__main .main-col .base-state .controls-col .content .controls .btn {
-    padding-left: 20px;
-    padding-right: 20px;
+    /*padding-left: 20px;*/
+    /*padding-right: 20px;*/
   }
 
   .table-new .table__body-card .table__main .main-col .base-state .controls-col .content .controls .btn + .btn {

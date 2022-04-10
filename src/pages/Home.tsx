@@ -18,7 +18,7 @@ import '../assets/css/App.css'
 
 // iwthout @types
 // @ts-ignore
-import { Tab, Tabs } from 'react-tabify';
+import {Tab, Tabs} from 'react-tabify';
 
 import {Link} from "react-router-dom";
 
@@ -30,6 +30,7 @@ import SenateLogo from '../assets/images/src/company-logos/senate-logo.png'
 import VRLogo from '../assets/images/src/company-logos/vr-logo.png'
 import CWARLogo from '../assets/images/src/company-logos/cwar-logo.png'
 import {useState} from "react";
+import {WalletConnectModal} from "../components/WalletConnectModal";
 
 export const Home = () => {
     const [isConnectWalletModalVisible, setIsConnectWalletModalVisible] = useState(false)
@@ -37,43 +38,15 @@ export const Home = () => {
 
     return (
         <div>
-            {isConnectWalletModalVisible ? (
-                <div className="modal">
-                    <div className="modal__inner">
-                        <div className="modal__content">
-                            <div className="modal__content-top">
-                                <h3 className="title-modal">Подключить свой кошелек</h3>
-                                <button className="close-btn" onClick={() => setIsConnectWalletModalVisible(false)}></button>
-                            </div>
-                            <div className="modal__content-body">
-                                <ul className="list-payment">
-                                    <li className="list-payment__item">
-                                        <img className="list-payment__item-logo"
-                                             src={MetaMaskIcon} alt="" />
-                                        <span className="list-payment__item-text">MetaMask</span>
-                                    </li>
-                                    <li className="list-payment__item">
-                                        <img className="list-payment__item-logo"
-                                             src={TrustWallet} alt="" />
-                                        <span className="list-payment__item-text">Trust Wallet</span>
-                                    </li>
-                                    <li className="list-payment__item">
-                                        <img className="list-payment__item-logo"
-                                             src={SafepallIcon} alt="" />
-                                        <span className="list-payment__item-text">Safepall</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            ) : null}
+            <WalletConnectModal isVisible={isConnectWalletModalVisible} title={"Connect Wallet"}
+                                setIsVisible={setIsConnectWalletModalVisible}/>
             <div className="overlay d-none" id="overlay"></div>
             <header className="header">
                 <div className="container">
                     <div className="header__inner">
                         <div className="header__inner-wallet">
-                            <button className="wallet-connect d-block" d-block d-sm-none onClick={() => setIsConnectWalletModalVisible(true)}>
+                            <button className="wallet-connect d-block" d-block d-sm-none
+                                    onClick={() => setIsConnectWalletModalVisible(true)}>
                                 Connect Wallet
                             </button>
                         </div>
@@ -96,8 +69,10 @@ export const Home = () => {
                         <button className="open-btn open d-block d-sm-none" id="open-btn">
                             <div className="open-btn__line" onClick={() => setIsMobileMenuOpen(true)}></div>
                         </button>
-                        <nav className={`menu-mobile ${!isMobileMenuOpen ? "closed" : "open"} d-block d-sm-none`} id="menu-mobile">
-                            <button className={`close-btn ${!isMobileMenuOpen ? "closed" : "open"}`} onClick={() => setIsMobileMenuOpen(false)} id="close-btn">
+                        <nav className={`menu-mobile ${!isMobileMenuOpen ? "closed" : "open"} d-block d-sm-none`}
+                             id="menu-mobile">
+                            <button className={`close-btn ${!isMobileMenuOpen ? "closed" : "open"}`}
+                                    onClick={() => setIsMobileMenuOpen(false)} id="close-btn">
                                 <div className="close-btn__line"></div>
                             </button>
                             <span className="menu-mobile__title">Menu</span>
