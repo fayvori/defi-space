@@ -71,7 +71,7 @@ export const Invest = () => {
                                 <nav className="menu">
                                     <ul className="menu__list">
                                         <Tab className="menu__item menu__link">New</Tab>
-                                        <Tab className="menu__item menu__link" disabled={true}>My portfolio</Tab>
+                                        <Tab className="menu__item menu__link" disabled={false}>My portfolio</Tab>
                                         <Tab className="menu__item menu__link">All history</Tab>
                                     </ul>
                                 </nav>

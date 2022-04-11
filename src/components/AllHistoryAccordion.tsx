@@ -16,10 +16,11 @@ import YouTubeIcon from '../assets/crm_images/src/youtube-icon.svg'
 import DiscordIcon from '../assets/crm_images/src/discord-icon.svg'
 import LinkedinIcon from '../assets/crm_images/src/linkedin-icon.svg'
 import VkIcon from '../assets/crm_images/src/vk-icon.svg'
+import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 
 import Collapsible from "react-collapsible";
 import {useState} from "react";
-import {parseImageUrl} from "../utils/utils";
+import {parseImageDebud, parseImageUrl} from "../utils/utils";
 
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
     const image = parseImageUrl(projInfo.image)
@@ -35,7 +36,8 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 <div className="logo-wrap">
                                     <img src={image} alt="" style={{
                                         maxWidth: 55,
-                                        maxHeight: 55
+                                        maxHeight: 55,
+                                        borderRadius: "100%"
                                     }}/>
                                 </div>
                                 <div className="info">
@@ -53,7 +55,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 <span className="info-title">{`$${projInfo.price}`}</span>
                             </div>
                             <div className="table__head-data vesting-col">
-                                <span className="info-title">{`${projInfo.vesting_months} months`}</span>
+                                <span className="info-title">{`${projInfo.vesting_months}`}</span>
                             </div>
                             <div className="table__head-data tge-col">
                                 <span className="info-title"></span>
@@ -74,6 +76,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 export const AllHistoryAccordion = (props: any) => {
     const [isOpen, setIsOpen] = useState(false)
 
+    // const image = parseImageUrl(props.projInfo.image)
     const image = parseImageUrl(props.projInfo.image)
 
     const close = () => {
@@ -114,7 +117,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="info-title">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="info-title">{`${props.projInfo.vesting_months} months`}</span>
+                                            <span className="info-title">{`${props.projInfo.vesting_months}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="info-title">{`${props.projInfo.vesting_percent}`}</span>
@@ -148,10 +151,10 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="text">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.vesting_months} months`}</span>
+                                            <span className="text">{`${props.projInfo.vesting_months}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.tge_percent}%`}</span>
+                                            <span className="text">{`${props.projInfo.tge_percent}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -188,13 +191,13 @@ export const AllHistoryAccordion = (props: any) => {
                                         <div className="table__main-data vesting-top-col">
                                             <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.vesting_months} months`}</span>
+                                                <span className="text">{`${props.projInfo.vesting_months}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            {/*<span className="title-col">{`${props.projInfo.vesting_tag.name}`}</span>*/}
+                                            <span className="title-col">TGE</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.tge_percent}%`}</span>
+                                                <span className="text">{`${props.projInfo.tge_percent}`}</span>
                                             </div>
                                         </div>
 
@@ -202,7 +205,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">Withdraw</span>
                                             <div className="content">
                                                 <div className="controls">
-                                                    <button className="btn btn--green-light">
+                                                    <button className="btn btn--green-light btn-content">
                                                         <span className="btn__text">Claim</span>
                                                         <div className="btn__bg"></div>
                                                     </button>
@@ -225,21 +228,21 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">&#8195;</span>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">Unlock</span>
                                             <div className="content">
                                                 <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
-                                        {/*<div className="table__main-data profit-col">*/}
-                                        {/*    <span className="title-col">Token locked</span>*/}
-                                        {/*    <div className="content">*/}
-                                        {/*        <span className="text">$2,294 (43%)</span>*/}
-                                        {/*    </div>*/}
-                                        {/*</div>*/}
+                                        <div className="table__main-data profit-col">
+                                            <span className="title-col">&#8195;</span>
+                                            <div className="content">
+                                                <span className="text">&#8195;</span>
+                                            </div>
+                                        </div>
                                         <div className="table__main-data token-locked-col">
                                             <span className="title-col">Next unlock</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.next_unlock_months} months left`}</span>
+                                                <span className="text">{`${props.projInfo.next_unlock_months}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
@@ -335,9 +338,17 @@ export const AllHistoryAccordion = (props: any) => {
                                                             </a>
                                                         </li>
                                                     )}
+                                                    {props.projInfo.github_link != "-" && (
+                                                        <li className="socials__item">
+                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.github_link}>
+                                                                <img className="socials__item-img"
+                                                                     src={GitHubIcon} alt=""/>
+                                                            </a>
+                                                        </li>
+                                                    )}
                                                 </ul>
                                                 <a className="project-link" target="_blank"
-                                                   href={props.projInfo.project_site}>{`${props.projInfo.project_site}`}</a>
+                                                   href={`https://${props.projInfo.project_site}`}>{`${props.projInfo.project_site}`}</a>
                                             </div>
                                         </div>
                                         <div className="table__main-data controls-col">
@@ -347,7 +358,7 @@ export const AllHistoryAccordion = (props: any) => {
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.dex_url}>
-                                                            <span className="btn__text">Exchange</span>
+                                                            <span className="btn__text">DEX</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>
@@ -355,6 +366,13 @@ export const AllHistoryAccordion = (props: any) => {
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.live_chat_url}>
                                                             <span className="btn__text">Live chart</span>
+                                                            <div className="btn__bg"></div>
+                                                        </a>
+                                                    </div>
+                                                    <div className="controls-list__item">
+                                                        <a className="btn controls-list__item-btn" target="_blank"
+                                                           href={props.projInfo.dex_url}>
+                                                            <span className="btn__text">Scan</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>

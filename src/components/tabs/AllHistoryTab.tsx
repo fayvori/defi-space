@@ -23,7 +23,6 @@ export const AllHistoryTab = () => {
                             <div className="table__head-data">Buy price</div>
                             <div className="table__head-data">Vesting</div>
                             <div className="table__head-data">TGE</div>
-                            <div className="table__head-data">Withdraw</div>
                         </div>
 
                         {data.map((el: any) => (

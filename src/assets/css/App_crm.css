@@ -5511,6 +5511,7 @@ main {
     }
     .about__inner .content__desc-text {
         text-align: center;
+        /*white-space: pre-line;*/
     }
     .about__inner .content__image {
         display: none;

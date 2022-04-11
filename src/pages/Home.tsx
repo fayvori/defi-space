@@ -4,7 +4,7 @@ import SatifyIcon from '../assets/images/src/safety-icon.svg'
 import SelectionIcon from '../assets/images/src/selection-icon.svg'
 import SvgEditorImage from '../assets/images/src/svg-editor-image.svg'
 import Arrow from '../assets/images/src/arrow.svg'
-import BusdIcon from '../assets/images/src/busd-icon.svg'
+import UsdtIcon from '../assets/images/src/usdt-icon.svg'
 import PoolIcon from '../assets/images/src/pool-icon.svg'
 import ChartImage from '../assets/images/src/chart-image.svg'
 
@@ -208,18 +208,28 @@ export const Home = () => {
                         <h2 className="title">About DeFi pool</h2>
                         <div className="content">
                             <div className="content__desc">
-                                <p className="content__desc-text">DeFi pool is the first platform in the world that
-                                    allows you to start a pool through smart contracts and distribute the received
-                                    tokens after vesting to investors' wallets. The platform is supported by dozens of
-                                    smart contracts operating on different networks - Ethereum, BSC, Polygon, Arbitrum,
-                                    Optimism, xDai, Phantom, Avalanche. Solana will be added soon. Instead of signing
-                                    SAFT, DeFi pool uses a secure transaction, where for each new project the platform
-                                    issues a smart contract responsible for starting pools. When filling a pool, a
-                                    startup sends its tokens to the smart contract, while investors send their
-                                    stablecoins. As soon as the pool is filled, tokens go to the vesting contract (which
-                                    is automatically released by the platform), and stablecoins go to the startup
-                                    address. If the pool is not filled, the startup receives its tokens back, and the
-                                    investors get their stablecoins</p>
+                                {/*<p className="content__desc-text">DeFi pool is the first platform in the world that*/}
+                                {/*    allows you to start a pool through smart contracts and distribute the received*/}
+                                {/*    tokens after vesting to investors' wallets. The platform is supported by dozens of*/}
+                                {/*    smart contracts operating on different networks - Ethereum, BSC, Polygon, Arbitrum,*/}
+                                {/*    Optimism, xDai, Phantom, Avalanche. Solana will be added soon. Instead of signing*/}
+                                {/*    SAFT, DeFi pool uses a secure transaction, where for each new project the platform*/}
+                                {/*    issues a smart contract responsible for starting pools. When filling a pool, a*/}
+                                {/*    startup sends its tokens to the smart contract, while investors send their*/}
+                                {/*    stablecoins. As soon as the pool is filled, tokens go to the vesting contract (which*/}
+                                {/*    is automatically released by the platform), and stablecoins go to the startup*/}
+                                {/*    address. If the pool is not filled, the startup receives its tokens back, and the*/}
+                                {/*    investors get their stablecoins</p>*/}
+                                <p className={"content__desc-text"}>
+                                    You don’t have to send assets to trust or private investors who fill pools. The DeFi
+                                    pool platform allows you to directly invest in a project in a private round and to
+                                    be a direct recipient of tokens after they are unfrozen.
+                                    Dozens of smart contracts, which are responsible for assets collection and
+                                    allocation, support the DeFi platform which works on different blockchains :
+                                    Ethereum, Bsc, Polygon, Arbitrum, Optimism, xDai, Phantom, Avalanche, Solana.
+                                    With each unlock, the total number of tokens is sent to the platform address, after
+                                    that you can get your coins by connecting the wallet to it
+                                </p>
                             </div>
                             <div className="content__image">
                                 <img src={SvgEditorImage} alt=""/>
@@ -231,7 +241,7 @@ export const Home = () => {
             <section className="graph" id="history">
                 <div className="container">
                     <div className="graph__inner">
-                        <h2 className="title">Pre IDO history of the last 3 months</h2>
+                        <h2 className="title">Recent projects history</h2>
                         <div className="chart-wrap">
                             <div className="chart">
                                 <div className="chart__names">
@@ -393,8 +403,8 @@ export const Home = () => {
                             <div className="converter">
                                 <div className="currency">
                                     <label htmlFor="converter_input_from" className="currency__name">
-                                        <img src={BusdIcon} alt="busd-icon"/>
-                                        <span>BUSD</span>
+                                        <img src={UsdtIcon} alt="busd-icon"/>
+                                        <span>USDT bep20</span>
                                     </label>
                                     <input id="converter_input_from" className="currency__input" type="number" min="0"/>
                                 </div>

@@ -5,7 +5,7 @@ import useAxios from "axios-hooks";
 
 export const CurrencyMyPortfolioTab = () => {
     const [{ data, loading, error }, refetch] = useAxios(
-        'https://backendapi.site/defi/defipool/projects/?format=json'
+        'https://backendapi.site/defi/defipool/portfolio/?format=json'
     )
 
     if (loading) return <p>Loading...</p>

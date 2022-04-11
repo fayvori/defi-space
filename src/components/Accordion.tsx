@@ -9,7 +9,12 @@ import {Steps, StepsProvider, useSteps} from "react-step-builder";
 import ProgressBar from "@ramonak/react-progress-bar";
 import Collapsible from "react-collapsible";
 import {useState} from "react";
-import {parseImageUrl} from "../utils/utils";
+import {parseImageDebud, parseImageUrl} from "../utils/utils";
+import YouTubeIcon from "../assets/crm_images/src/youtube-icon.svg";
+import DiscordIcon from "../assets/crm_images/src/discord-icon.svg";
+import LinkedinIcon from "../assets/crm_images/src/linkedin-icon.svg";
+import VkIcon from "../assets/crm_images/src/vk-icon.svg";
+import GitHubIcon from "../assets/crm_images/src/github-icon.svg";
 
 type AccordionCloseProps = {
     close: () => void;
@@ -193,6 +198,7 @@ type AccordionProps = {
 
 // render accordion header
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
+    // const image = parseImageUrl(projInfo.image)
     const image = parseImageUrl(projInfo.image)
 
     return (
@@ -262,8 +268,7 @@ export const Accordion = (props: AccordionProps) => {
                                             </div>
                                             <div className="info">
                                                 <span className="info__title">{props.projectInfo.name}</span>
-                                                <a href={props.projectInfo.project_site} target="_blank"
-                                                   rel="noopener noreferrer"
+                                                <a href={`https://${props.projectInfo.project_site}`} target="_blank"
                                                    className="info__link">{props.projectInfo.project_site}</a>
                                             </div>
                                         </div>
@@ -275,37 +280,73 @@ export const Accordion = (props: AccordionProps) => {
                                             <ul className="socials__list">
                                                 {props.projectInfo.instagram_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link"
-                                                           href={props.projectInfo.instagram_link}>
-                                                            <img src={InstagramIcon} alt=""
-                                                                 className="socials__item-img"/>
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.instagram_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={InstagramIcon} alt=""/>
                                                         </a>
                                                     </li>
                                                 )}
                                                 {props.projectInfo.facebook_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link"
-                                                           href={props.projectInfo.facebook_link}>
-                                                            <img src={FacebookIcon} alt=""
-                                                                 className="socials__item-img"/>
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.facebook_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={FacebookIcon} alt=""/>
                                                         </a>
                                                     </li>
                                                 )}
                                                 {props.projectInfo.telegram_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link"
-                                                           href={props.projectInfo.telegram_link}>
-                                                            <img src={TelegramIcon} alt=""
-                                                                 className="socials__item-img"/>
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.telegram_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={TelegramIcon} alt=""/>
                                                         </a>
                                                     </li>
                                                 )}
                                                 {props.projectInfo.twitter_link != "-" && (
                                                     <li className="socials__item">
-                                                        <a className="socials__item-link"
-                                                           href={props.projectInfo.twitter_link}>
-                                                            <img src={TwitterIcon} alt=""
-                                                                 className="socials__item-img"/>
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.twitter_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={TwitterIcon} alt=""/>
+                                                        </a>
+                                                    </li>
+                                                )}
+                                                {props.projectInfo.youtube_link != "-" && (
+                                                    <li className="socials__item">
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.youtube_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={YouTubeIcon} alt=""/>
+                                                        </a>
+                                                    </li>
+                                                )}
+                                                {props.projectInfo.discord_link != "-" && (
+                                                    <li className="socials__item">
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.discord_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={DiscordIcon} alt=""/>
+                                                        </a>
+                                                    </li>
+                                                )}
+                                                {props.projectInfo.linkedin_link != "-" && (
+                                                    <li className="socials__item">
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.linkedin_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={LinkedinIcon} alt=""/>
+                                                        </a>
+                                                    </li>
+                                                )}
+                                                {props.projectInfo.vk_link != "-" && (
+                                                    <li className="socials__item">
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.vk_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={VkIcon} alt=""/>
+                                                        </a>
+                                                    </li>
+                                                )}
+                                                {props.projectInfo.github_link != "-" && (
+                                                    <li className="socials__item">
+                                                        <a className="socials__item-link" target="_blank" href={props.projectInfo.github_link}>
+                                                            <img className="socials__item-img"
+                                                                 src={GitHubIcon} alt=""/>
                                                         </a>
                                                     </li>
                                                 )}
