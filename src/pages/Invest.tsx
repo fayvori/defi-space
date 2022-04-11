@@ -54,16 +54,6 @@ export const Invest = () => {
                                 {/*        <span className="wallet__text">0xb2c6...ff92</span>*/}
                                 {/*    </div>*/}
                                 {/*</div>*/}
-                                <div className="navigation-bottom__right">
-                                    <div className="profit-info">
-                                        <p className="profit-info__title">Total profit</p>
-                                        <p className="profit-info__content">
-                                            <span className="profit-info__content-price">$46,817</span>
-                                            <span className="profit-info__content-percent">59%</span>
-                                        </p>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                         <div className="navigation-bottom">
@@ -90,6 +80,15 @@ export const Invest = () => {
                                 {/*        Connect Wallet*/}
                                 {/*    </button>*/}
                                 {/*</div>*/}
+                                <div className="navigation-bottom__right">
+                                    <div className="profit-info">
+                                        <p className="profit-info__title">Total profit</p>
+                                        <p className="profit-info__content">
+                                            <span className="profit-info__content-price">$46,817</span>
+                                            <span className="profit-info__content-percent">59%</span>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

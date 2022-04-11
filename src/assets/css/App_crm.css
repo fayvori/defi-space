@@ -402,7 +402,6 @@ progress {
 .header__invest {
     display: flex;
     justify-content: space-between;
-    margin-top: 35px;
 }
 
 .container,
