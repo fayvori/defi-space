@@ -4614,6 +4614,9 @@ main {
     background-repeat: no-repeat;
     background-size: 100% 100%;
     padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
     background: black;
 }
 .header__inner .menu {
@@ -5686,7 +5689,7 @@ main {
         margin-top: 0;
     }
     .main-section {
-        padding-top: 50px;
+        padding-top: 150px;
     }
     .main-section__inner .content {
         max-width: 100%;

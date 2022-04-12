@@ -60,9 +60,9 @@ export const Invest = () => {
                             <div className="navigation-bottom__left">
                                 <nav className="menu">
                                     <ul className="menu__list">
-                                        <Tab className="menu__item menu__link">New</Tab>
-                                        <Tab className="menu__item menu__link" disabled={false}>My portfolio</Tab>
-                                        <Tab className="menu__item menu__link">All history</Tab>
+                                        <Tab className={`menu__item ${selectedTab == 0 ? "menu__item--active" : ""} menu__link`}>New</Tab>
+                                        <Tab className={`menu__item ${selectedTab == 1 ? "menu__item--active" : ""} menu__link`} disabled={false}>My portfolio</Tab>
+                                        <Tab className={`menu__item ${selectedTab == 2 ? "menu__item--active" : ""} menu__link`}>All history</Tab>
                                     </ul>
                                 </nav>
                             </div>

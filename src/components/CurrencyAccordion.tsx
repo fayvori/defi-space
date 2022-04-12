@@ -376,21 +376,21 @@ export const CurrencyAccordion = (props: any) => {
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.dex_url}>
-                                                            <span className="btn__text">Scan</span>
-                                                            <div className="btn__bg"></div>
-                                                        </a>
-                                                    </div>
-                                                    <div className="controls-list__item">
-                                                        <a className="btn controls-list__item-btn" target="_blank"
-                                                           href={props.projInfo.dex_url}>
-                                                            <span className="btn__text">DEX</span>
+                                                            <span className="btn__text">Exchange</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.live_chat_url}>
-                                                            <span className="btn__text">Live chart</span>
+                                                            <span className="btn__text">Live chat</span>
+                                                            <div className="btn__bg"></div>
+                                                        </a>
+                                                    </div>
+                                                    <div className="controls-list__item">
+                                                        <a className="btn controls-list__item-btn" target="_blank"
+                                                           href={props.projInfo.dex_url}>
+                                                            <span className="btn__text">Scan</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>
