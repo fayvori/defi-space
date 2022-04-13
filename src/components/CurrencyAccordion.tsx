@@ -1,6 +1,7 @@
 import '../assets/css/App.css'
 import '../assets/css/App_crm.css'
 import '../assets/css/circle-progress.css';
+import '../assets/css/custom-circleprogress.css'
 
 import PascalLogo from '../assets/crm_images/src/logo-cur-1.png'
 import BinanceLogo from '../assets/crm_images/src/binange-icon.png'
@@ -19,9 +20,9 @@ import VkIcon from '../assets/crm_images/src/vk-icon.svg'
 import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 
 import Collapsible from "react-collapsible";
-import ProgressBar from 'react-customizable-progressbar'
 import {useEffect, useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
+import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
     // const image = parseImageUrl(projInfo.image)
@@ -83,37 +84,7 @@ export const CurrencyAccordion = (props: any) => {
     const [tokensInProject, setTokensInProject] = useState(8000)
     const [tokensReceive, setTokensReceive] = useState(2000)
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setPercent(prevState => prevState + 1)
-    //     }, 1000)
-    // })
-
     const image = parseImageUrl(props.projInfo.image)
-
-    // props for circle progress
-    const circleProps = {
-        percent: percent, // is require
-        colorSlice: "#32D74B",
-        colorCircle: "#fff",
-        fontColor: "#FFFFFF",
-        fontSize: "1.2rem",
-        fontWeight: 400,
-        size: 170,
-        stroke: 6,
-        strokeBottom: 6,
-        speed: 60,
-        cut: 0,
-        rotation: -90,
-        opacity: 10,
-        fill: "transparent",
-        unit: "%",
-        textPosition: "0.35em",
-        animationOff: true,
-        inverse: false,
-        round: false,
-        number: false,
-    }
 
     console.log(props.projInfo)
 
@@ -269,19 +240,12 @@ export const CurrencyAccordion = (props: any) => {
                                                 {/*    </div>*/}
                                                 {/*</div>*/}
                                                 <div className={"progress-ring-wrap"}>
-                                                    <div
-                                                        style={{
-                                                            maxWidth: 160
-                                                        }}
-                                                    >
-                                                        <ProgressBar
-                                                            progress={60}
-                                                            radius={100}
-                                                            strokeWidth={17}
-                                                            trackStrokeWidth={17}
-                                                            strokeColor={"#32D74B"}
-                                                        />
-                                                    </div>
+                                                    <CircularProgressbarWithChildren value={percent}>
+                                                        <div>Remainder</div>
+                                                        <div>
+                                                            <h4 style={{ color: "#FFF" }}>{percent}%</h4>
+                                                        </div>
+                                                    </CircularProgressbarWithChildren>
                                                 </div>
 
                                                 <div className="info-wrap">

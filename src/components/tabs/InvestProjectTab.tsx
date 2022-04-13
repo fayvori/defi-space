@@ -3,24 +3,12 @@ import '../../assets/css/App_crm.css'
 import {Accordion} from "../Accordion";
 import useAxios from "axios-hooks";
 
-
-const accordions = [
-    {
-        completed: 34,
-        timedOut: false,
-    },
-    {
-        completed: 100,
-        timedOut: false
-    }
-]
-
 export const InvestProjectTab = () => {
     const [{ data, loading, error }, refetch] = useAxios(
         'https://backendapi.site/defi/defipool/projects/?format=json'
     )
 
-    if (loading) return <p>Loading...</p>
+    if (loading) return <p></p>
     if (error) return <p>Error!</p>
 
     return (

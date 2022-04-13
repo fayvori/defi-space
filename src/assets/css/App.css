@@ -6492,6 +6492,24 @@ main {
     }
 }
 
+.navigation-top__right-mobile {
+    display: none;
+}
+
+.navigation-top__right-pc {
+    display: flex;
+}
+
+@media screen and (max-width: 576px) {
+    .navigation-top__right-mobile {
+        display: flex;
+    }
+
+    .navigation-top__right-pc {
+        display: none;
+    }
+}
+
 .navigation-top__right, .navigation-top__right .wallet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6506,7 +6524,15 @@ main {
     width: 24px;
 }
 
-.navigation-top__right .wallet__text {
+.navigation-top__right-mobile .wallet__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.navigation-top__right-pc .wallet__text {
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -6674,6 +6700,20 @@ main {
 
 .navigation-bottom__left .menu__item + .menu__item {
     margin-left: 10px;
+}
+
+.wallet-not__connected {
+    width: 133px;
+}
+
+.wallet-not__connected-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .wallet-not__connected {
+        display: none;
+    }
 }
 
 .navigation-bottom__right {
@@ -6996,7 +7036,9 @@ main {
     -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 13.5% 11.16% 7.44%;
     display: -ms-grid;
     display: grid;
-    grid-template-areas: "blockchain info info analysis vesting token-locked next-unlock profit" ". socials . analysis exchanges exchanges exchanges exchanges" ". socials . . controls controls controls controls";
+    grid-template-areas: "blockchain info info analysis vesting token-locked next-unlock profit"
+". socials . analysis exchanges exchanges exchanges exchanges"
+". socials controls controls controls controls controls controls";
     grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 13.5% 11.16% 7.44%;
     height: 100%;
     padding: 25px 30px 30px;
@@ -7307,6 +7349,26 @@ main {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .table-potfolio .table__body-main .table__main-data.controls-col .content .controls-list {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .controls-list__item-btn {
+        min-width: 140px !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .controls-list__item-btn {
+        min-width: 120px !important;
+    }
 }
 
 .controls-list__item-btn {

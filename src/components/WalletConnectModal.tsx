@@ -1,5 +1,5 @@
 import MetaMaskIcon from "../assets/images/src/payment-icon-MetaMask.svg";
-import TrustWallet from "../assets/images/src/payment-icon-TrustWallet.svg";
+import ConnectWallet from "../assets/images/src/payment-icon-TrustWallet.svg";
 import SafepallIcon from "../assets/images/src/payment-icon-Safepall.svg";
 
 
@@ -29,8 +29,8 @@ export const WalletConnectModal = (props: Props) => {
                                     </li>
                                     <li className="list-payment__item">
                                         <img className="list-payment__item-logo"
-                                             src={TrustWallet} alt="" />
-                                        <span className="list-payment__item-text">Trust Wallet</span>
+                                             src={ConnectWallet} alt="" />
+                                        <span className="list-payment__item-text">Connect Wallet</span>
                                     </li>
                                     {/*<li className="list-payment__item">*/}
                                     {/*    <img className="list-payment__item-logo"*/}

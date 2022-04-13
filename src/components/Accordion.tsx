@@ -26,7 +26,7 @@ const AccordionStep1 = (props: AccordionProps) => {
     return (
         <div className="main-col">
             {/*//@ts-ignore*/}
-            <button className="toggle-btn" onClick={() => props.close()}></button>
+            {/*<button className="toggle-btn" onClick={() => props.close()}></button>*/}
             <div className="base-state">
                 <div className="table-data round-col">
                     <span className="title-col">Round</span>
@@ -258,7 +258,7 @@ export const Accordion = (props: AccordionProps) => {
                     >
                         <div className="table__body">
                             <div className="table__body-card table__body-card--open">
-                                <button className="toggle-mobile-btn" onClick={() => setIsOpen(prev => !prev)}></button>
+                                {/*<button className="toggle-mobile-btn" onClick={() => setIsOpen(prev => !prev)}></button>*/}
 
                                 <div className="table__main">
                                     <div className="company-col">

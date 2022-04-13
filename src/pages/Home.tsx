@@ -31,6 +31,7 @@ import VRLogo from '../assets/images/src/company-logos/vr-logo.png'
 import CWARLogo from '../assets/images/src/company-logos/cwar-logo.png'
 import {useState} from "react";
 import {WalletConnectModal} from "../components/WalletConnectModal";
+import WalletIcon from "../assets/crm_images/src/wallet-icon.svg";
 
 export const Home = () => {
     const [isConnectWalletModalVisible, setIsConnectWalletModalVisible] = useState(false)
@@ -69,9 +70,13 @@ export const Home = () => {
                             </ul>
                         </nav>
 
-                        <button className="open-btn open d-block d-sm-none" id="open-btn">
-                            <div className="open-btn__line" onClick={() => setIsMobileMenuOpen(true)}></div>
-                        </button>
+
+                        <div className="open-btn open d-block d-sm-none" id="open-btn">
+                            <div className={"open-btn--mobile"}>
+                                <button style={{ width: 30, marginLeft: 20 }} className="open-btn__line" onClick={() => setIsMobileMenuOpen(true)}></button>
+                            </div>
+                        </div>
+
                         <nav className={`menu-mobile ${!isMobileMenuOpen ? "closed" : "open"} d-block d-sm-none`}
                              id="menu-mobile">
                             <button className={`close-btn ${!isMobileMenuOpen ? "closed" : "open"}`}
