@@ -228,7 +228,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">&#8195;</span>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Unlock</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
                                                 <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>

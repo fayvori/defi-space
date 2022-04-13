@@ -1,8 +1,8 @@
 import '../assets/css/App.css'
 import '../assets/css/App_crm.css'
+import '../assets/css/circle-progress.css';
 
 import PascalLogo from '../assets/crm_images/src/logo-cur-1.png'
-import PascalLogoBig from '../assets/crm_images/src/logo-cur-1-4x.png'
 import BinanceLogo from '../assets/crm_images/src/binange-icon.png'
 import SigenLogo from '../assets/crm_images/src/sigen.pro-icon.png'
 import HotbitLogo from '../assets/crm_images/src/hotbit-icon.png'
@@ -19,7 +19,8 @@ import VkIcon from '../assets/crm_images/src/vk-icon.svg'
 import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 
 import Collapsible from "react-collapsible";
-import {useState} from "react";
+import ProgressBar from 'react-customizable-progressbar'
+import {useEffect, useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
 
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
@@ -78,7 +79,41 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 export const CurrencyAccordion = (props: any) => {
     const [isOpen, setIsOpen] = useState(false)
 
+    const [percent, setPercent] = useState(60)
+    const [tokensInProject, setTokensInProject] = useState(8000)
+    const [tokensReceive, setTokensReceive] = useState(2000)
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setPercent(prevState => prevState + 1)
+    //     }, 1000)
+    // })
+
     const image = parseImageUrl(props.projInfo.image)
+
+    // props for circle progress
+    const circleProps = {
+        percent: percent, // is require
+        colorSlice: "#32D74B",
+        colorCircle: "#fff",
+        fontColor: "#FFFFFF",
+        fontSize: "1.2rem",
+        fontWeight: 400,
+        size: 170,
+        stroke: 6,
+        strokeBottom: 6,
+        speed: 60,
+        cut: 0,
+        rotation: -90,
+        opacity: 10,
+        fill: "transparent",
+        unit: "%",
+        textPosition: "0.35em",
+        animationOff: true,
+        inverse: false,
+        round: false,
+        number: false,
+    }
 
     console.log(props.projInfo)
 
@@ -131,7 +166,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     <span className="btn__text">Claim</span>
                                                     <div className="btn__bg"></div>
                                                 </button>
-                                                <button className="toggle-btn" onClick={() => setIsOpen(false)}></button>
+                                                <button className="toggle-btn"
+                                                        onClick={() => setIsOpen(false)}></button>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +200,8 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data vesting-top-col">
                                             <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.vesting_months} months`}</span>
+                                                <span
+                                                    className="text">{`${props.projInfo.vesting_months} months`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
@@ -198,57 +235,73 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data analysis-col">
                                             <span className="title-col">Analysis</span>
                                             <div className="content">
-                                                <div className="progress-ring-wrap">
-                                                    <svg
-                                                        className="progress-ring"
-                                                        width="100%"
-                                                        height="100%"
-                                                        viewBox="0 0 120 120"
+                                                {/*<div className="progress-ring-wrap">*/}
+                                                {/*    <svg*/}
+                                                {/*        className="progress-ring"*/}
+                                                {/*        width="100%"*/}
+                                                {/*        height="100%"*/}
+                                                {/*        viewBox="0 0 120 120"*/}
+                                                {/*    >*/}
+                                                {/*        <circle*/}
+                                                {/*            className="progress-ring__circle"*/}
+                                                {/*            stroke="#fff"*/}
+                                                {/*            stroke-width="10"*/}
+                                                {/*            fill="transparent"*/}
+                                                {/*            r="55"*/}
+                                                {/*            cx="60"*/}
+                                                {/*            cy="60"*/}
+                                                {/*        />*/}
+                                                {/*        <circle*/}
+                                                {/*            id='circle-new'*/}
+                                                {/*            className="progress-ring__circle"*/}
+                                                {/*            stroke="#32D74D"*/}
+                                                {/*            stroke-width="10"*/}
+                                                {/*            fill="transparent"*/}
+                                                {/*            r="55"*/}
+                                                {/*            cx="60"*/}
+                                                {/*            cy="60"*/}
+                                                {/*        />*/}
+                                                {/*    </svg>*/}
+                                                {/*    <div className="progress-ring__inner">*/}
+                                                {/*        <span className="progress-ring__inner-title">Total</span>*/}
+                                                {/*        <span className="progress-ring__inner-desc"*/}
+                                                {/*              data-total="5,291">$5,291</span>*/}
+                                                {/*    </div>*/}
+                                                {/*</div>*/}
+                                                <div className={"progress-ring-wrap"}>
+                                                    <div
+                                                        style={{
+                                                            maxWidth: 160
+                                                        }}
                                                     >
-                                                        <circle
-                                                            className="progress-ring__circle"
-                                                            stroke="#fff"
-                                                            stroke-width="10"
-                                                            fill="transparent"
-                                                            r="55"
-                                                            cx="60"
-                                                            cy="60"
+                                                        <ProgressBar
+                                                            progress={60}
+                                                            radius={100}
+                                                            strokeWidth={17}
+                                                            trackStrokeWidth={17}
+                                                            strokeColor={"#32D74B"}
                                                         />
-                                                        <circle
-                                                            id='circle-new'
-                                                            className="progress-ring__circle"
-                                                            stroke="#32D74D"
-                                                            stroke-width="10"
-                                                            fill="transparent"
-                                                            r="55"
-                                                            cx="60"
-                                                            cy="60"
-                                                        />
-                                                    </svg>
-                                                    <div className="progress-ring__inner">
-                                                        <span className="progress-ring__inner-title">Total</span>
-                                                        <span className="progress-ring__inner-desc"
-                                                              data-total="5,291">$5,291</span>
                                                     </div>
                                                 </div>
+
                                                 <div className="info-wrap">
                                                     <div className="info">
-                                                    <span className="info__desc info__desc"
-                                                          data-in-project="2,294">$2,294</span>
+                                                        <span className="info__desc info__desc">{tokensInProject}</span>
                                                         <span className="info__title">In project</span>
                                                     </div>
                                                     <div className="info">
-                                                    <span className="info__desc info__desc--green"
-                                                          data-receive="2,997">$2,997</span>
+                                                        <span
+                                                            className="info__desc info__desc--green">{tokensReceive}</span>
                                                         <span className="info__title">Receive</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Unlock</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
+                                                <span
+                                                    className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
@@ -294,7 +347,8 @@ export const CurrencyAccordion = (props: any) => {
                                                 <ul className="socials__list">
                                                     {props.projInfo.instagram_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.instagram_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.instagram_link}>
                                                                 <img className="socials__item-img"
                                                                      src={InstagramIcon} alt=""/>
                                                             </a>
@@ -302,7 +356,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.facebook_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.facebook_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.facebook_link}>
                                                                 <img className="socials__item-img"
                                                                      src={FacebookIcon} alt=""/>
                                                             </a>
@@ -310,7 +365,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.telegram_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.telegram_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.telegram_link}>
                                                                 <img className="socials__item-img"
                                                                      src={TelegramIcon} alt=""/>
                                                             </a>
@@ -318,7 +374,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.twitter_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.twitter_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.twitter_link}>
                                                                 <img className="socials__item-img"
                                                                      src={TwitterIcon} alt=""/>
                                                             </a>
@@ -326,7 +383,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.youtube_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.youtube_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.youtube_link}>
                                                                 <img className="socials__item-img"
                                                                      src={YouTubeIcon} alt=""/>
                                                             </a>
@@ -334,7 +392,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.discord_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.discord_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.discord_link}>
                                                                 <img className="socials__item-img"
                                                                      src={DiscordIcon} alt=""/>
                                                             </a>
@@ -342,7 +401,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.linkedin_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.linkedin_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.linkedin_link}>
                                                                 <img className="socials__item-img"
                                                                      src={LinkedinIcon} alt=""/>
                                                             </a>
@@ -350,7 +410,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.vk_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.vk_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.vk_link}>
                                                                 <img className="socials__item-img"
                                                                      src={VkIcon} alt=""/>
                                                             </a>
@@ -358,7 +419,8 @@ export const CurrencyAccordion = (props: any) => {
                                                     )}
                                                     {props.projInfo.github_link != "-" && (
                                                         <li className="socials__item">
-                                                            <a className="socials__item-link" target="_blank" href={props.projInfo.github_link}>
+                                                            <a className="socials__item-link" target="_blank"
+                                                               href={props.projInfo.github_link}>
                                                                 <img className="socials__item-img"
                                                                      src={GitHubIcon} alt=""/>
                                                             </a>
@@ -397,7 +459,7 @@ export const CurrencyAccordion = (props: any) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <img className="logo-company" src={image} />
+                                        <img className="logo-company" src={image}/>
                                     </div>
                                 </div>
                             </div>

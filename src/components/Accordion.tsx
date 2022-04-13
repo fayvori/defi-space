@@ -238,7 +238,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 
 // accordion
 export const Accordion = (props: AccordionProps) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const close = () => {
         setIsOpen(false)

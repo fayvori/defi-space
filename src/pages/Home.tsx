@@ -36,6 +36,9 @@ export const Home = () => {
     const [isConnectWalletModalVisible, setIsConnectWalletModalVisible] = useState(false)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+    const [usdt, setUsdt] = useState(0)
+    let usdtInPool = usdt * 3.5
+
     return (
         <div>
             <WalletConnectModal isVisible={isConnectWalletModalVisible} title={"Connect Wallet"}
@@ -190,7 +193,7 @@ export const Home = () => {
                                 </div>
                                 <div className="cards__item">
                                     <div className="cards__item-image-wrap">
-                                        <img src={SelectionIcon} alt=""/>
+                                        <img src={SelectionIcon} alt="" />
                                     </div>
                                     <h4 className="cards__item-title">The best selection of project</h4>
                                     <p className="cards__item-desc">Our team selects only the most promising projects,
@@ -221,14 +224,9 @@ export const Home = () => {
                                 {/*    address. If the pool is not filled, the startup receives its tokens back, and the*/}
                                 {/*    investors get their stablecoins</p>*/}
                                 <p className={"content__desc-text"}>
-                                    You don’t have to send assets to trust or private investors who fill pools. The DeFi
-                                    pool platform allows you to directly invest in a project in a private round and to
-                                    be a direct recipient of tokens after they are unfrozen.
-                                    Dozens of smart contracts, which are responsible for assets collection and
-                                    allocation, support the DeFi platform which works on different blockchains :
-                                    Ethereum, Bsc, Polygon, Arbitrum, Optimism, xDai, Phantom, Avalanche, Solana.
-                                    With each unlock, the total number of tokens is sent to the platform address, after
-                                    that you can get your coins by connecting the wallet to it
+                                    {'You don’t have to send assets to trust or private investors who fill pools. The DeFi pool platform allows you to directly invest in a project in a private round and to be a direct recipient of tokens after they are unfrozen.' +
+                                        '\r\n\nDozens of smart contracts, which are responsible for assets collection and allocation, support the DeFi platform which works on different blockchains : Ethereum, Bsc, Polygon, Arbitrum, Optimism, xDai, Phantom, Avalanche, Solana. ' +
+                                        '\r\n\nWith each unlock, the total number of tokens is sent to the platform address, after that you can get your coins by connecting the wallet, which participated in filling the pool, to it.'}
                                 </p>
                             </div>
                             <div className="content__image">
@@ -406,7 +404,9 @@ export const Home = () => {
                                         <img src={UsdtIcon} alt="busd-icon"/>
                                         <span>USDT bep20</span>
                                     </label>
-                                    <input id="converter_input_from" className="currency__input" type="number" min="0"/>
+                                    <input id="converter_input_from" className="currency__input"
+                                           onChange={(v) => setUsdt(parseFloat(v.target.value))} value={usdt}
+                                           type="number" min="0"/>
                                 </div>
                                 <button className="converter__btn-arrow" title="change convert">
                                     <img src={Arrow} alt=""/>
@@ -416,7 +416,8 @@ export const Home = () => {
                                         <img src={PoolIcon} alt="pool-icon"/>
                                         <span>POOL</span>
                                     </label>
-                                    <input id="converter_input_to" className="currency__input" type="number" min="0"/>
+                                    <input id="converter_input_to" value={usdtInPool} className="currency__input"
+                                           type="number" min="0"/>
                                 </div>
                                 <button className="converter__btn" type="submit" title="Exchange"
                                         id="exchange-btn">Exchange

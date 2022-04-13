@@ -20,7 +20,7 @@ export const CurrencyMyPortfolioTab = () => {
                         <div className="table__head-data">Amount</div>
                         <div className="table__head-data">Value</div>
                         <div className="table__head-data">Buy price</div>
-                        <div className="table__head-data">Vesting</div>
+                        <div className="table__head-data">My investment</div>
                         <div className="table__head-data">TGE</div>
                         <div className="table__head-data">Withdraw</div>
                     </div>

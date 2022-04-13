@@ -6477,6 +6477,21 @@ main {
     justify-content: flex-end;
 }
 
+.navigation-top__right, .navigation-top__right {
+    padding-right: 25px;
+}
+
+@media screen and (max-width: 767px) {
+    .navigation-top__right, .navigation-top__right {
+        padding-right: 5px;
+        font-size: 14px;
+    }
+
+    .navigation-top__right, .navigation-top__right .wallet .wallet__text {
+        font-size: 14px;
+    }
+}
+
 .navigation-top__right, .navigation-top__right .wallet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7293,6 +7308,22 @@ main {
     display: flex;
     height: 100%;
 }
+
+.controls-list__item-btn {
+    min-width: 165px;
+}
+
+@media screen and (max-width: 576px) {
+    .controls-list__item-btn {
+        min-width: 150px;
+    }
+}
+
+/*@media screen and (min-width: 576px) and (max-width: 776px) {*/
+/*    .controls-list__item-btn {*/
+/*        max-width: 180px;*/
+/*    }*/
+/*}*/
 
 .table-potfolio .table__body-main .table__main-data.controls-col .content .controls-list__item-btn:hover {
     color: #fff;

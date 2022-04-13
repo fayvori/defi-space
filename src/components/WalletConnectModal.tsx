@@ -32,11 +32,11 @@ export const WalletConnectModal = (props: Props) => {
                                              src={TrustWallet} alt="" />
                                         <span className="list-payment__item-text">Trust Wallet</span>
                                     </li>
-                                    <li className="list-payment__item">
-                                        <img className="list-payment__item-logo"
-                                             src={SafepallIcon} alt="" />
-                                        <span className="list-payment__item-text">Safepall</span>
-                                    </li>
+                                    {/*<li className="list-payment__item">*/}
+                                    {/*    <img className="list-payment__item-logo"*/}
+                                    {/*         src={SafepallIcon} alt="" />*/}
+                                    {/*    <span className="list-payment__item-text">Safepall</span>*/}
+                                    {/*</li>*/}
                                 </ul>
                             </div>
                         </div>
