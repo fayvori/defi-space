@@ -6381,7 +6381,7 @@ main {
     width: 100%
 }
 
-@media screen and (min-width: 767px) and (max-width: 800px) {
+@media screen and (min-width: 767px) and (max-width: 845px) {
     .btn__text {
         font-size: 15px;
     }
@@ -7039,13 +7039,13 @@ main {
 }
 
 .table-potfolio .table__body-main .table__main {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 13.5% 11.16% 7.44%;
+    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 15.2% 11.5% 11.16% 7.44%;
     display: -ms-grid;
     display: grid;
     grid-template-areas: "blockchain info info analysis vesting token-locked next-unlock profit"
 ". socials . analysis exchanges exchanges exchanges exchanges"
 ". socials controls controls controls controls controls controls";
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 13.5% 11.16% 7.44%;
+    grid-template-columns: 13.6% 14.4% 13% 15.2% 15.2% 11.5% 11.16% 7.44%;
     height: 100%;
     padding: 25px 30px 30px;
     position: relative;
@@ -7356,7 +7356,6 @@ main {
     display: flex;
     height: 100%;
     justify-content: flex-end;
-    margin-right: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -10012,3 +10011,10 @@ main {
     }
 }
 
+.margin-controls-history {
+    margin-right: 15px;
+}
+
+.margin-controls-portfolio {
+    margin-right: 15px;
+}

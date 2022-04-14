@@ -122,7 +122,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="info-title">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="info-title">{`${props.projInfo.vesting}`}</span>
+                                            <span className="info-title">{`${props.projInfo.entry_date}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -156,7 +156,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="text">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.vesting}`}</span>
+                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -197,9 +197,9 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">Entry date</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.vesting}`}</span>
+                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>
                                         </div>
 
@@ -226,9 +226,9 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">&#8195;</span>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">To fill the pool</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text text-subtitle">{`${props.projInfo.to_fill_the_pool}`}</span>
+                                                <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
@@ -347,7 +347,7 @@ export const AllHistoryAccordion = (props: any) => {
                                         <div className="table__main-data controls-col">
                                             <span className="title-col">&nbsp;</span>
                                             <div className="content">
-                                                <div className="controls-list">
+                                                <div className="controls-list margin-controls-history">
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.dex_url}>

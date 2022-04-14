@@ -129,7 +129,7 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">{`${props.projInfo.my_investment}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.vesting}`}</span>
+                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -176,9 +176,9 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">Entry date</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.vesting}`}</span>
+                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>
                                         </div>
 
@@ -262,10 +262,10 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">To fill the pool</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
                                                 <span
-                                                    className="text text-subtitle">{`${props.projInfo.to_fill_the_pool}`}</span>
+                                                    className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
@@ -394,7 +394,7 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data controls-col">
                                             <span className="title-col">&nbsp;</span>
                                             <div className="content">
-                                                <div className="controls-list">
+                                                <div className="controls-list margin-controls-portfolio">
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.dex_url}>
@@ -411,7 +411,7 @@ export const CurrencyAccordion = (props: any) => {
                                                     </div>
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
-                                                           href={props.projInfo.dex_url}>
+                                                           href={props.projInfo.scan_url}>
                                                             <span className="btn__text">Scan</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
