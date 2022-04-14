@@ -5,7 +5,7 @@ import useAxios from "axios-hooks";
 
 export const AllHistoryTab = () => {
     const [{ data, loading, error }, refetch] = useAxios(
-        'https://backendapi.site/defi/defipool/projects_history/?format=json'
+        'https://backendapi.site/defi/defipool/portfolio/?format=json'
     )
 
     if (loading) return <p></p>
@@ -22,7 +22,7 @@ export const AllHistoryTab = () => {
                             <div className="table__head-data">Value</div>
                             <div className="table__head-data">Buy price</div>
                             <div className="table__head-data">My investment</div>
-                            <div className="table__head-data">TGE</div>
+                            <div className="table__head-data">Vesting</div>
                         </div>
 
                         {data.map((el: any) => (

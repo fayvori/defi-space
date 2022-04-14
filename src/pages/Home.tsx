@@ -7,10 +7,7 @@ import Arrow from '../assets/images/src/arrow.svg'
 import UsdtIcon from '../assets/images/src/usdt-icon.svg'
 import PoolIcon from '../assets/images/src/pool-icon.svg'
 import ChartImage from '../assets/images/src/chart-image.svg'
-
-import MetaMaskIcon from '../assets/images/src/payment-icon-MetaMask.svg'
-import SafepallIcon from '../assets/images/src/payment-icon-Safepall.svg'
-import TrustWallet from '../assets/images/src/payment-icon-TrustWallet.svg'
+import BurgerIcon from '../assets/images/src/burger.svg'
 
 import '../js/app'
 import '../assets/css/App_crm.css'
@@ -73,7 +70,7 @@ export const Home = () => {
 
                         <div className="open-btn open d-block d-sm-none" id="open-btn">
                             <div className={"open-btn--mobile"}>
-                                <button style={{ width: 30, marginLeft: 20 }} className="open-btn__line" onClick={() => setIsMobileMenuOpen(true)}></button>
+                                <img src={BurgerIcon} style={{width: 30, marginLeft: 20}} onClick={() => setIsMobileMenuOpen(true)} />
                             </div>
                         </div>
 

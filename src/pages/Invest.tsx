@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
 
 import WalletIcon from '../assets/crm_images/src/wallet-icon.svg'
+import BurgerIcon from '../assets/images/src/burger.svg'
+
 import {CurrencyAccordion} from "../components/CurrencyAccordion";
 import {CurrencyMyPortfolioTab} from "../components/tabs/CurrencyMyPortfolioTab";
 import {InvestProjectTab} from "../components/tabs/InvestProjectTab";
@@ -104,8 +106,10 @@ export const Invest = () => {
                                                            </div>
                                                        ) : <div className={"wallet-not__connected-mobile"}></div>}
                                                    </div>
-                                                   <button style={{width: 30, marginLeft: 20}} className="open-btn__line"
-                                                           onClick={() => setIsMobileMenuOpen(true)}></button>
+                                                   {/*<button style={{width: 30, marginLeft: 20}} className="open-btn__line"*/}
+                                                   {/*        onClick={() => setIsMobileMenuOpen(true)}></button>*/}
+
+                                                   <img src={BurgerIcon} style={{width: 30, marginLeft: 20}} onClick={() => setIsMobileMenuOpen(true)} />
                                                </div>
                                            </div>
                                            <nav
@@ -122,14 +126,14 @@ export const Invest = () => {
                                                    <TabList>
                                                        <Link style={{ marginTop: 10 }} to={"/"} className={"menu__item menu__link"}>Home</Link>
                                                        <Tab
-                                                           style={{ marginLeft: 0, fontWeight: "300" }}
+                                                           style={{ marginLeft: 0, fontWeight: "200" }}
                                                            className={`menu__item menu__link ${selectedTab == 0 ? "menu__link-active-mobile" : ""}`}>New</Tab>
                                                        <Tab
-                                                           style={{ marginLeft: 0, fontWeight: "300" }}
+                                                           style={{ marginLeft: 0, fontWeight: "200" }}
                                                            className={`menu__item menu__link ${selectedTab == 1 ? "menu__link-active-mobile" : ""}`}>
                                                            My portfolio</Tab>
                                                        <Tab
-                                                           style={{ marginLeft: 0, fontWeight: "300" }}
+                                                           style={{ marginLeft: 0, fontWeight: "200" }}
                                                            className={`menu__item menu__link ${selectedTab == 2 ? "menu__link-active-mobile" : ""}`}>All
                                                            history</Tab>
                                                    </TabList>

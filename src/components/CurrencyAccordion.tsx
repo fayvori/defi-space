@@ -59,7 +59,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 <span className="info-title">{`$${projInfo.price}`}</span>
                             </div>
                             <div className="table__head-data vesting-col">
-                                <span className="info-title">{`${projInfo.vesting_months}`}</span>
+                                <span className="info-title">{`${projInfo.my_investment}`}</span>
                             </div>
                             <div className="table__head-data tge-col">
                                 <span className="info-title"></span>
@@ -126,10 +126,10 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.vesting_months}`}</span>
+                                            <span className="text">{`${props.projInfo.my_investment}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.tge_percent}`}</span>
+                                            <span className="text">{`${props.projInfo.vesting}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -169,16 +169,16 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-top-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">My investment</span>
                                             <div className="content">
                                                 <span
-                                                    className="text">{`${props.projInfo.vesting_months} months`}</span>
+                                                    className="text">{`${props.projInfo.my_investment}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">TGE</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.tge_percent}%`}</span>
+                                                <span className="text">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
 
@@ -200,7 +200,7 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data info-col">
                                             <span className="title-col">Info</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.description}`}</span>
+                                                <span className="text">{`${props.projInfo.info}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data analysis-col">
@@ -262,25 +262,25 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">To fill the pool</span>
                                             <div className="content">
                                                 <span
-                                                    className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
+                                                    className="text text-subtitle">{`${props.projInfo.to_fill_the_pool}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
-                                            <span className="title-col">Next unlock</span>
+                                            <span className="title-col">TGE</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.next_unlock_months}`}</span>
-                                            </div>
-                                        </div>
-                                        <div className="table__main-data profit-col">
-                                            <span className="title-col">&#8195;</span>
-                                            <div className="content">
-                                                <span className="text">&#8195;</span>
+                                                <span className="text">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
+                                            <span className="title-col">IDO</span>
+                                            <div className="content">
+                                                <span className="text">{props.projInfo.ido}</span>
+                                            </div>
+                                        </div>
+                                        <div className="table__main-data profit-col">
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
@@ -291,18 +291,14 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="title-col">Exchanges</span>
                                             <div className="content">
                                                 <div className="exchanges-company">
-                                                    <div className="exchanges-company__item">
-                                                        <img className="exchanges-company__item-img"
-                                                             src={BinanceLogo} alt="binange"/>
-                                                    </div>
-                                                    <div className="exchanges-company__item">
-                                                        <img className="exchanges-company__item-img"
-                                                             src={SigenLogo} alt="sigen.pro"/>
-                                                    </div>
-                                                    <div className="exchanges-company__item">
-                                                        <img className="exchanges-company__item-img"
-                                                             src={HotbitLogo} alt="hotbit"/>
-                                                    </div>
+                                                    {props.projInfo.exchanges.map((el: any) => (
+                                                        <div key={el.image}>
+                                                            <a href={el.link} target={"_blank"}>
+                                                                <img className="exchanges-company__item-img"
+                                                                     src={parseImageUrl(el.image)} alt="sigen.pro"/>
+                                                            </a>
+                                                        </div>
+                                                    ))}
                                                 </div>
                                             </div>
                                         </div>

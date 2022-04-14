@@ -6381,6 +6381,12 @@ main {
     width: 100%
 }
 
+@media screen and (min-width: 767px) and (max-width: 800px) {
+    .btn__text {
+        font-size: 15px;
+    }
+}
+
 .btn__bg {
     background: -webkit-gradient(linear, left top, right top, from(#9b4ff7), to(#6624b6));
     background: -o-linear-gradient(left, #9b4ff7 0, #6624b6 100%);
@@ -6926,11 +6932,11 @@ main {
 }
 
 .table-potfolio .table__body-main .table__head {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 12% 18.6%;
     border: none;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 12% 18.6%;
     padding: 26px 30px;
     width: 100%
 }
@@ -8327,7 +8333,7 @@ main {
     }
 
     .table-potfolio .table__body-main .table__main .analysis-col .progress-ring, .table-potfolio .table__body-main .table__main .analysis-col .progress-ring-wrap {
-        max-width: 115px;
+        max-width: 130px;
     }
 
     .table-potfolio .table__body-main .table__main .analysis-col .progress-ring__inner-title {
@@ -8907,7 +8913,7 @@ main {
     }
 
     .table-potfolio .table__body-main .table__main .analysis-col .content .progress-ring-wrap {
-        max-width: 100%
+        max-width: 160px
     }
 
     .table-potfolio .table__body-main .table__main .analysis-col .content .progress-ring__inner-title {

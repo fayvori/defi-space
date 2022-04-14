@@ -4410,7 +4410,7 @@ main {
 
 .menu__link-active-mobile {
     color: #FFFFFF !important;
-    font-weight: bold !important;
+    font-weight: bolder !important;
 }
 
 .open-btn__line {
