@@ -1,5 +1,5 @@
 import MetaMaskIcon from "../assets/images/src/payment-icon-MetaMask.svg";
-import ConnectWallet from "../assets/images/src/payment-icon-TrustWallet.svg";
+import ConnectWallet from "../assets/images/src/walletconnect.png";
 import SafepallIcon from "../assets/images/src/payment-icon-Safepall.svg";
 
 
@@ -17,7 +17,7 @@ export const WalletConnectModal = (props: Props) => {
                     <div className="modal__inner">
                         <div className="modal__content">
                             <div className="modal__content-top">
-                                <h3 className="title-modal">Подключить свой кошелек</h3>
+                                <h3 className="title-modal">Connect Wallet</h3>
                                 <button className="close-btn" onClick={() => props.setIsVisible(false)}></button>
                             </div>
                             <div className="modal__content-body">
