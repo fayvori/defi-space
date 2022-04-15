@@ -46,22 +46,28 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 </div>
                             </div>
                             <div className="table__head-data amount-col">
-                                <span className="info-title">&#8195;</span>
+                                <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data value-col">
-                                <span className="info-title">&#8195;</span>
+                                <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data buy-price-col">
-                                <span className="info-title">&#8195;</span>
+                                <span className="info-title">${projInfo.price}</span>
                             </div>
                             <div className="table__head-data vesting-col">
-                                <span className="info-title">&#8195;</span>
+                                <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data tge-col">
-                                <span className="info-title"></span>
+                                <span className="info-title">{projInfo.entry_date}</span>
                             </div>
                             <div className="table__head-data withdraw-col">
                                 <div className="controls">
+                                    <div style={{
+                                        display: "flex",
+                                        alignItems: "center"
+                                    }}>
+                                        <span className="text text--accent" style={{ color: "#34c759" }}>+ 27.2%</span>
+                                    </div>
                                     <button className="toggle-btn"></button>
                                 </div>
                             </div>
@@ -150,7 +156,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="text">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`-`}</span>
+                                            <span className="text">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text">{`-`}</span>
@@ -187,7 +193,7 @@ export const AllHistoryAccordion = (props: any) => {
                                         <div className="table__main-data buy-price-col">
                                             <span className="title-col">Buy price</span>
                                             <div className="content">
-                                                <span className="text">{`-`}</span>
+                                                <span className="text">{`$${props.projInfo.price}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-top-col">
@@ -197,7 +203,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">Entry date</span>
+                                            <span className="title-col">Joining date</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>
@@ -351,7 +357,7 @@ export const AllHistoryAccordion = (props: any) => {
                                                     <div className="controls-list__item">
                                                         <a className="btn controls-list__item-btn" target="_blank"
                                                            href={props.projInfo.dex_url}>
-                                                            <span className="btn__text">DEX</span>
+                                                            <span className="btn__text">Exchange</span>
                                                             <div className="btn__bg"></div>
                                                         </a>
                                                     </div>

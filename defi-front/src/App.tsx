@@ -1,4 +1,5 @@
 import './assets/css/App.css';
+import './assets/css/App_crm.css'
 
 import {Home} from "./pages/Home";
 import {Invest} from "./pages/Invest";

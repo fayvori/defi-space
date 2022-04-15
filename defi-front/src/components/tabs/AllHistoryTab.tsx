@@ -22,7 +22,7 @@ export const AllHistoryTab = () => {
                             <div className="table__head-data">Value</div>
                             <div className="table__head-data">Buy price</div>
                             <div className="table__head-data">My investment</div>
-                            <div className="table__head-data">Entry date</div>
+                            <div className="table__head-data">Joining date</div>
                         </div>
 
                         {data.map((el: any) => (

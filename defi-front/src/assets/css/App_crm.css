@@ -5065,7 +5065,7 @@ main {
     -webkit-transition: all 0.25s ease;
     -o-transition: all 0.25s ease;
     transition: all 0.25s ease;
-    width: 50%;
+    width: 100%;
 }
 
 .invest__screen-container {
@@ -5483,7 +5483,6 @@ main {
     .graph__inner .chart__names {
         -ms-flex-preferred-size: initial;
         flex-basis: auto;
-        margin-bottom: 30px;
         max-width: 100%;
         width: 100%;
     }

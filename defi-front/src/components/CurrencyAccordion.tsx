@@ -62,10 +62,16 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 <span className="info-title">{`${projInfo.my_investment}`}</span>
                             </div>
                             <div className="table__head-data tge-col">
-                                <span className="info-title"></span>
+                                <span className="info-title">{`${projInfo.entry_date}`}</span>
                             </div>
                             <div className="table__head-data withdraw-col">
                                 <div className="controls">
+                                    <div style={{
+                                        display: "flex",
+                                        alignItems: "center"
+                                    }}>
+                                        <span className="text text--accent" style={{ color: "#34c759" }}>+ 27.2%</span>
+                                    </div>
                                     <button className="toggle-btn"></button>
                                 </div>
                             </div>
@@ -176,7 +182,7 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">Entry date</span>
+                                            <span className="title-col">Joining date</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>

@@ -1,0 +1,39 @@
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+    padding-inline-start: 0px;
+    outline: 0;
+}
+
+.react-tabs__tab {
+    outline: 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.react-tabs__tab--selected {
+    outline: 0;
+}
+
+.react-tabs__tab--disabled {
+    outline: 0;
+    color: GrayText;
+    cursor: default;
+}
+
+.react-tabs__tab:focus {
+    outline: 0;
+}
+
+.react-tabs__tab:focus:after {
+}
+
+.react-tabs__tab-panel {
+    display: none;
+}
+
+.react-tabs__tab-panel--selected {
+    display: block;
+}

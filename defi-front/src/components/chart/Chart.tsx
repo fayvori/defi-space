@@ -1,4 +1,4 @@
-import ChartImage from "../assets/images/src/chart-image.svg";
+import ChartImage from "../../assets/images/src/chart-image.svg";
 
 type ChartProps = {
     name: string;

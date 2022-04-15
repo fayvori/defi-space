@@ -10,6 +10,7 @@ import {CurrencyMyPortfolioTab} from "../components/tabs/CurrencyMyPortfolioTab"
 import {InvestProjectTab} from "../components/tabs/InvestProjectTab";
 import {AllHistoryTab} from "../components/tabs/AllHistoryTab";
 import '../assets/css/App.css'
+import '../assets/css/invest-tabs.css'
 import {useState} from "react";
 import {WalletConnectModal} from "../components/WalletConnectModal";
 import useWindowDimensions from "../hooks/useWindowDimensions";
