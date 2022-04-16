@@ -22,7 +22,8 @@ import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 import Collapsible from "react-collapsible";
 import {useCallback, useEffect, useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
+import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
     // const image = parseImageUrl(projInfo.image)
@@ -70,7 +71,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                         display: "flex",
                                         alignItems: "center"
                                     }}>
-                                        <span className="text text--accent" style={{ color: "#34c759" }}>+ 27.2%</span>
+                                        <span className="text text--accent" style={{color: "#34c759"}}>+ 27.2%</span>
                                     </div>
                                     <button className="toggle-btn"></button>
                                 </div>
@@ -84,6 +85,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 }
 
 export const CurrencyAccordion = (props: any) => {
+    const {width, height} = useWindowDimensions()
     const [isOpen, setIsOpen] = useState(false)
 
     const [percent, setPercent] = useState(60)
@@ -139,7 +141,8 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">{`79,357 ${props.projInfo.short_name}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text" style={{ whiteSpace: "pre-line" }}>{`${props.projInfo.vesting}`}</span>
+                                            <span className="text"
+                                                  style={{whiteSpace: "pre-line"}}>{`${props.projInfo.vesting}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -161,34 +164,34 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data amount-col">
-                                            <span className="title-col">Amount</span>
+                                            <span className="title-col">Joining date</span>
                                             <div className="content">
-                                                <span className="text">{`79,357 ${props.projInfo.short_name}`}</span>
+                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data value-col">
-                                            <span className="title-col">Value</span>
-                                            <div className="content">
-                                                <span className="text">$4,360</span>
-                                            </div>
-                                        </div>
-                                        <div className="table__main-data buy-price-col">
                                             <span className="title-col">Buy price</span>
                                             <div className="content">
                                                 <span className="text">{`$${props.projInfo.price}`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data vesting-top-col">
+                                        <div className="table__main-data buy-price-col">
                                             <span className="title-col">My investment</span>
                                             <div className="content">
+                                                <span className="text">{`${props.projInfo.my_investment}`}</span>
+                                            </div>
+                                        </div>
+                                        <div className="table__main-data vesting-top-col">
+                                            <span className="title-col">Amount</span>
+                                            <div className="content">
                                                 <span
-                                                    className="text">{`${props.projInfo.my_investment}`}</span>
+                                                    className="text">{`79,357 ${props.projInfo.short_name}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
-                                            <span className="title-col">Joining date</span>
+                                            <span className="title-col">Vesting</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
+                                                <span className="text">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
 
@@ -253,7 +256,7 @@ export const CurrencyAccordion = (props: any) => {
                                                     <CircularProgressbarWithChildren value={percent}>
                                                         <div>Remainder</div>
                                                         <div>
-                                                            <h4 style={{ color: "#FFF" }}>{percent}%</h4>
+                                                            <h4 style={{color: "#FFF"}}>{percent}%</h4>
                                                         </div>
                                                     </CircularProgressbarWithChildren>
                                                 </div>
@@ -271,26 +274,26 @@ export const CurrencyAccordion = (props: any) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="table__main-data vesting-col">
+                                        <div className={`table__main-data ${width < 1200 ? "token-locked-col" : "vesting-col"}`}>
                                             <span className="title-col">TGE</span>
                                             <div className="content">
                                                 <span
                                                     className="text text-subtitle">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data token-locked-col">
+                                        <div className={`table__main-data ${width < 1200 ? "next-unlock-col" : "token-locked-col"}`}>
                                             <span className="title-col">IDO</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data next-unlock-col">
+                                        <div className={`table__main-data ${width < 1200 ? "ido-col" : "next-unlock-col"}`}>
                                             <span className="title-col">Value</span>
                                             <div className="content">
                                                 <span className="text">$4,360</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data profit-col">
+                                        <div className={`table__main-data ${width < 1200 ? "profit-col" : "profit-col"}`}>
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
