@@ -1,4 +1,4 @@
-from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel
+from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel, ExchangeModel
 from rest_framework import serializers
 
 
@@ -14,7 +14,13 @@ class InvestmentProjectSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class MyPortfolioProjectModelSerialzier(serializers.ModelSerializer):
+class MyPortfolioProjectModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = MyPortfolioProjectModel
         fields = '__all__'
+
+
+class ExchangeModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ExchangeModel
+        fields = ['image', 'link']

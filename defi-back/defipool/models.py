@@ -1,14 +1,17 @@
 from django.db import models
 
 
+class ExchangeModel(models.Model):
+    name = models.CharField(max_length=200)
+    image = models.ImageField(upload_to="defi_exchanges/")
+    link = models.CharField(max_length=400)
+
+
 class InvestmentProjectModel(models.Model):
     name = models.CharField(max_length=255, unique=True)
-    # short_name = models.CharField(max_length=100)
     project_site = models.CharField(max_length=255)
     image = models.ImageField(upload_to="defi_projects/")
     description = models.TextField()
-    # round = models.CharField(max_length=100)
-    # price = models.FloatField()
     round = models.TextField()
     vesting = models.TextField()
     ido = models.TextField()
@@ -45,11 +48,12 @@ class MyPortfolioProjectModel(models.Model):
     ido = models.TextField()
     image = models.ImageField(upload_to="defi_projects/")
     project_site = models.CharField(max_length=255)
-    exchanges = models.TextField(default="")
+    exchanges = models.ManyToManyField(ExchangeModel, blank=True)
 
     pool_address = models.CharField(max_length=400, default="")
     claim_address = models.CharField(max_length=400, default="")
     claim_network = models.CharField(max_length=400, default="")
+    cmc_id = models.IntegerField(default=0)
     instagram_link = models.CharField(max_length=255, default="-")
     facebook_link = models.CharField(max_length=255, default="-")
     telegram_link = models.CharField(max_length=255, default="-")

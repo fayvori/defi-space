@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel
-from .serializers import InvestmentProjectSerializer, PreIDOHistorySerializer, MyPortfolioProjectModelSerialzier
+from .serializers import InvestmentProjectSerializer, PreIDOHistorySerializer, MyPortfolioProjectModelSerializer
 
 
 class InvestmentProjectViewSet(viewsets.ModelViewSet):
@@ -15,4 +15,4 @@ class PreIDOHistoryViewSet(viewsets.ModelViewSet):
 
 class MyPortfolioViewSet(viewsets.ModelViewSet):
     queryset = MyPortfolioProjectModel.objects.all()
-    serializer_class = MyPortfolioProjectModelSerialzier
+    serializer_class = MyPortfolioProjectModelSerializer
