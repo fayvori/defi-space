@@ -281,13 +281,13 @@ export const CurrencyAccordion = (props: any) => {
                                                     className="text text-subtitle">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "next-unlock-col" : "token-locked-col"}`}>
+                                        <div className={`table__main-data ${width < 1200 ? "ido-col" : "token-locked-col"}`}>
                                             <span className="title-col">IDO</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "ido-col" : "next-unlock-col"}`}>
+                                        <div className={`table__main-data ${width < 1200 ? "next-unlock-col" : "ido-col"}`}>
                                             <span className="title-col">Value</span>
                                             <div className="content">
                                                 <span className="text">$4,360</span>

@@ -47,6 +47,9 @@ class MyPortfolioProjectModel(models.Model):
     project_site = models.CharField(max_length=255)
     exchanges = models.TextField(default="")
 
+    pool_address = models.CharField(max_length=400, default="")
+    claim_address = models.CharField(max_length=400, default="")
+    claim_network = models.CharField(max_length=400, default="")
     instagram_link = models.CharField(max_length=255, default="-")
     facebook_link = models.CharField(max_length=255, default="-")
     telegram_link = models.CharField(max_length=255, default="-")
