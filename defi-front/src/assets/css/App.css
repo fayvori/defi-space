@@ -9,6 +9,12 @@
     border-radius: 50px;
 }
 
+.wrapper-failed {
+    border: 1px solid #FFFFFF;
+    max-width: 320px;
+    border-radius: 50px;
+}
+
 @media screen and (max-width: 576px) {
     .wrapper {
         max-width: 100%;

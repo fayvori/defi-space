@@ -68,7 +68,7 @@ const AccordionStep1 = (props: AccordionProps) => {
                                                 </span>
                                             </span>
                     <div className="content">
-                        <ProgressBar completed={props.completed} maxCompleted={100} className={"wrapper"}
+                        <ProgressBar completed={props.completed} maxCompleted={100} className={!props.timedOut ? "wrapper" : "wrapper-failed"}
                                      baseBgColor={"transparent"} bgColor={!props.timedOut ? "#1AB641" : "#e83737"}/>
                     </div>
                 </div>
@@ -82,80 +82,77 @@ const AccordionStep1 = (props: AccordionProps) => {
                 </div>
                 <div className="table-data controls-col">
                     <div className="content">
-                        {props.completed < 100 ?
-                            (
-                                <div className="controls">
-                                    <button className="btn btn--green-light" id="btn-green"
-                                            onClick={() => stepsState.next()}>
-                                        <span className="btn__text">Invest</span>
-                                        <div className="btn__bg"></div>
-                                    </button>
-                                </div>
-                            ) : (
-                                <div className="controls">
-                                    <div className="table-data controls-col">
-                                        <div className="content">
-                                            <div className="controls">
-                                                <button className="btn">
-                                                    <span className="btn__text">Reclaim POOL</span>
-                                                    <div className="btn__bg"></div>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        }
-                        {/*{() => {*/}
-                        {/*    if (props.timedOut && props.completed < 100) {*/}
-                        {/*        return props.completed < 100 ?*/}
-                        {/*            (*/}
-                        {/*                <div className="controls">*/}
-                        {/*                    <button className="btn btn--green-light" id="btn-green"*/}
-                        {/*                            onClick={() => stepsState.next()}>*/}
-                        {/*                        <span className="btn__text">Invest</span>*/}
-                        {/*                        <div className="btn__bg"></div>*/}
-                        {/*                    </button>*/}
-                        {/*                </div>*/}
-                        {/*            ) : (*/}
-                        {/*                <div className="controls">*/}
-                        {/*                    <div className="table-data controls-col">*/}
-                        {/*                        <div className="content">*/}
-                        {/*                            <div className="controls">*/}
-                        {/*                                <button className="btn">*/}
-                        {/*                                    <span className="btn__text">Reclaim POOL</span>*/}
-                        {/*                                    <div className="btn__bg"></div>*/}
-                        {/*                                </button>*/}
-                        {/*                            </div>*/}
-                        {/*                        </div>*/}
-                        {/*                    </div>*/}
-                        {/*                </div>*/}
-                        {/*            )*/}
-                        {/*    } else {*/}
-                        {/*        return (*/}
-                        {/*            <div className="controls">*/}
-                        {/*                <div className="table-data controls-col">*/}
-                        {/*                    <div className="content">*/}
-                        {/*                        <div className="controls">*/}
-
-                        {/*                            <button className="btn">*/}
-                        {/*                                <span className="btn__text">Reclaim Investment</span>*/}
-                        {/*                                <div className="btn__bg"></div>*/}
-                        {/*                            </button>*/}
-
-                        {/*                            <button className="btn">*/}
-                        {/*                                <span className="btn__text">Reclaim POOL</span>*/}
-                        {/*                                <div className="btn__bg"></div>*/}
-                        {/*                            </button>*/}
-
-
-                        {/*                        </div>*/}
+                        {/*{props.completed < 100 ?*/}
+                        {/*    (*/}
+                        {/*        <div className="controls">*/}
+                        {/*            <button className="btn btn--green-light" id="btn-green"*/}
+                        {/*                    onClick={() => stepsState.next()}>*/}
+                        {/*                <span className="btn__text">Invest</span>*/}
+                        {/*                <div className="btn__bg"></div>*/}
+                        {/*            </button>*/}
+                        {/*        </div>*/}
+                        {/*    ) : (*/}
+                        {/*        <div className="controls">*/}
+                        {/*            <div className="table-data controls-col">*/}
+                        {/*                <div className="content">*/}
+                        {/*                    <div className="controls">*/}
+                        {/*                        <button className="btn">*/}
+                        {/*                            <span className="btn__text">Reclaim POOL</span>*/}
+                        {/*                            <div className="btn__bg"></div>*/}
+                        {/*                        </button>*/}
                         {/*                    </div>*/}
                         {/*                </div>*/}
                         {/*            </div>*/}
-                        {/*        )*/}
-                        {/*    }*/}
-                        {/*}}*/}
+                        {/*        </div>*/}
+                        {/*    )*/}
+                        {/*}*/}
+                        {(() => {
+                            if (!props.timedOut) {
+                                return props.completed < 100 ?
+                                    (
+                                        <div className="controls">
+                                            <button className="btn btn--green-light" id="btn-green"
+                                                    onClick={() => stepsState.next()}>
+                                                <span className="btn__text">Invest</span>
+                                                <div className="btn__bg"></div>
+                                            </button>
+                                        </div>
+                                    ) : (
+                                        <div className="controls">
+                                            <div className="table-data controls-col">
+                                                <div className="content">
+                                                    <div className="controls">
+                                                        <button className="btn">
+                                                            <span className="btn__text">Reclaim POOL</span>
+                                                            <div className="btn__bg"></div>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                            } else {
+                                return (
+                                    <div className="controls">
+                                        <div className="table-data controls-col">
+                                            <div className="content">
+                                                <div className="controls">
+                                                    <button className="btn">
+                                                        <span className="btn__text">Reclaim Investment</span>
+                                                        <div className="btn__bg"></div>
+                                                    </button>
+
+                                                    <button className="btn">
+                                                        <span className="btn__text">Reclaim POOL</span>
+                                                        <div className="btn__bg"></div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        })()}
                     </div>
                 </div>
             </div>

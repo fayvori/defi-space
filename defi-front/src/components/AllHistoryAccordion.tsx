@@ -46,19 +46,19 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 </div>
                             </div>
                             <div className="table__head-data amount-col">
-                                <span className="info-title">-</span>
+                                <span className="info-title">{projInfo.entry_date}</span>
                             </div>
                             <div className="table__head-data value-col">
-                                <span className="info-title">-</span>
+                                <span className="info-title">${projInfo.price}</span>
                             </div>
                             <div className="table__head-data buy-price-col">
-                                <span className="info-title">${projInfo.price}</span>
+                                <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data vesting-col">
                                 <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data tge-col">
-                                <span className="info-title">{projInfo.entry_date}</span>
+                                <span className="info-title" style={{ whiteSpace: "pre-line" }}>{projInfo.vesting}</span>
                             </div>
                             <div className="table__head-data withdraw-col">
                                 <div className="controls">
@@ -153,16 +153,16 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="text">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`-`}</span>
-                                        </div>
-                                        <div className="table__head-data">
                                             <span className="text">{`$${props.projInfo.price}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
+                                            <span className="text">{`-`}</span>
+                                        </div>
+                                        <div className="table__head-data">
+                                            <span className="text" style={{ whiteSpace: "pre-line" }}>{`${props.projInfo.vesting}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -232,21 +232,21 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">&#8195;</span>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">TGE</span>
                                             <div className="content">
-                                                <span className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
+                                                <span className="text text-subtitle">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
-                                            <span className="title-col">IDO</span>
+                                            <span className="title-col">Value</span>
                                             <div className="content">
-                                                <span className="text">{props.projInfo.ido}</span>
+                                                <span className="text">$4,360</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
-                                            <span className="title-col">TGE</span>
+                                            <span className="title-col">IDO</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.tge}`}</span>
+                                                <span className="text">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data profit-col">

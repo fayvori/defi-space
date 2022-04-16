@@ -21,8 +21,8 @@ export const AllHistoryTab = () => {
                             <div className="table__head-data">Joining date</div>
                             <div className="table__head-data">Buy price</div>
                             <div className="table__head-data">My investment</div>
-                            <div className="table__head-data"></div>
-                            <div className="table__head-data">Joining date</div>
+                            <div className="table__head-data">Amount</div>
+                            <div className="table__head-data">Vesting</div>
                             <div className="table__head-data">Profit</div>
                         </div>
 

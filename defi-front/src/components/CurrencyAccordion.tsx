@@ -51,19 +51,19 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 </div>
                             </div>
                             <div className="table__head-data amount-col">
-                                <span className="info-title">{`296,898 ${projInfo.short_name}`}</span>
+                                <span className="info-title">{projInfo.entry_date}</span>
                             </div>
                             <div className="table__head-data value-col">
-                                <span className="info-title">$4,360</span>
+                                <span className="info-title">${projInfo.price}</span>
                             </div>
                             <div className="table__head-data buy-price-col">
-                                <span className="info-title">{`$${projInfo.price}`}</span>
-                            </div>
-                            <div className="table__head-data vesting-col">
                                 <span className="info-title">{`${projInfo.my_investment}`}</span>
                             </div>
+                            <div className="table__head-data vesting-col">
+                                <span className="info-title">{`79,357 ${projInfo.short_name}`}</span>
+                            </div>
                             <div className="table__head-data tge-col">
-                                <span className="info-title">{`${projInfo.entry_date}`}</span>
+                                <span className="info-title" style={{ whiteSpace: "pre-line" }}>{`${projInfo.vesting}`}</span>
                             </div>
                             <div className="table__head-data withdraw-col">
                                 <div className="controls">
@@ -274,26 +274,26 @@ export const CurrencyAccordion = (props: any) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "token-locked-col" : "vesting-col"}`}>
+                                        <div className={`table__main-data ${width < 400 ? "token-locked-col" : "vesting-col"}`}>
                                             <span className="title-col">TGE</span>
                                             <div className="content">
                                                 <span
                                                     className="text text-subtitle">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "ido-col" : "token-locked-col"}`}>
+                                        <div className={`table__main-data ${width < 400 ? "ido-col" : "token-locked-col"}`}>
                                             <span className="title-col">IDO</span>
                                             <div className="content">
                                                 <span className="text">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "next-unlock-col" : "ido-col"}`}>
+                                        <div className={`table__main-data ${width < 400 ? "next-unlock-col" : "ido-col"}`}>
                                             <span className="title-col">Value</span>
                                             <div className="content">
                                                 <span className="text">$4,360</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 1200 ? "profit-col" : "profit-col"}`}>
+                                        <div className={`table__main-data ${width < 400 ? "profit-col" : "profit-col"}`}>
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
