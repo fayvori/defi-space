@@ -6790,11 +6790,11 @@ main {
 }
 
 .table-potfolio .table__head {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    -ms-grid-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     border-bottom: 1px solid #292b2f;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    grid-template-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     padding: 20px 30px 15px;
     width: 100%
 }
@@ -6822,11 +6822,11 @@ main {
 }
 
 .table-potfolio .table__body-head .table__head {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    -ms-grid-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     border: none;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 11% 18.6%;
+    grid-template-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     padding: 26px 30px;
     width: 100%
 }
@@ -6932,11 +6932,11 @@ main {
 }
 
 .table-potfolio .table__body-main .table__head {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 14.2% 12% 18.6%;
+    -ms-grid-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     border: none;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 14.2% 12% 18.6%;
+    grid-template-columns: 11% 14% 14% 14% 14% 14% 19.2%;
     padding: 26px 30px;
     width: 100%
 }
@@ -7039,13 +7039,13 @@ main {
 }
 
 .table-potfolio .table__body-main .table__main {
-    -ms-grid-columns: 13.6% 14.4% 13% 15.2% 15.2% 11.5% 11.16% 7.44%;
+    -ms-grid-columns: 11% 14% 14% 14% 14% 14% 11.16% 8.05%;
     display: -ms-grid;
     display: grid;
     grid-template-areas: "blockchain info info analysis vesting token-locked next-unlock profit"
 ". socials . analysis exchanges exchanges exchanges exchanges"
 ". socials controls controls controls controls controls controls";
-    grid-template-columns: 13.6% 14.4% 13% 15.2% 15.2% 11.5% 11.16% 7.44%;
+    grid-template-columns: 11% 14% 14% 14% 14% 14% 11.16% 8.05%;
     height: 100%;
     padding: 25px 30px 30px;
     position: relative;
@@ -10016,5 +10016,5 @@ main {
 }
 
 .margin-controls-portfolio {
-    margin-right: 15px;
+    margin-right: 37px;
 }

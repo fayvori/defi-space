@@ -30,5 +30,9 @@ urlpatterns = [
     path('defi/admin/', admin.site.urls)
 ]
 
-urlpatterns += static('defi' + settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+else:
+    urlpatterns += static('defi' + settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 urlpatterns += static('defi' + settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,19 +1,6 @@
 from django.db import models
 
 
-class ExchangeModel(models.Model):
-    name = models.CharField(max_length=200, default="")
-    image = models.ImageField(upload_to="defi_exchanges/")
-    link = models.CharField(max_length=400)
-
-    class Meta:
-        verbose_name = "Биржи"
-        verbose_name_plural = "Биржи"
-
-    def __str__(self):
-        return self.name
-
-
 class InvestmentProjectModel(models.Model):
     name = models.CharField(max_length=255, unique=True)
     # short_name = models.CharField(max_length=100)
@@ -58,7 +45,7 @@ class MyPortfolioProjectModel(models.Model):
     ido = models.TextField()
     image = models.ImageField(upload_to="defi_projects/")
     project_site = models.CharField(max_length=255)
-    exchanges = models.ManyToManyField(ExchangeModel)
+    exchanges = models.TextField(default="")
 
     instagram_link = models.CharField(max_length=255, default="-")
     facebook_link = models.CharField(max_length=255, default="-")

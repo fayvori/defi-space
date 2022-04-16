@@ -86,7 +86,7 @@ export const Invest = () => {
                                                <TabList className={"menu__list"}>
                                                    <Link to={"/"} className={"menu__item menu__link"}>Home</Link>
                                                    <Tab
-                                                       className={`menu__item menu__link ${selectedTab == 0 ? "menu__link-active" : ""}`}>New</Tab>
+                                                       className={`menu__item menu__link ${selectedTab == 0 ? "menu__link-active" : ""}`}>New project</Tab>
                                                    <Tab
                                                        // disabled={wallet == null}
                                                        className={`menu__item menu__link ${selectedTab == 1 ? "menu__link-active" : ""}`}>My
@@ -128,7 +128,7 @@ export const Invest = () => {
                                                        <Link style={{ marginTop: 10 }} to={"/"} className={"menu__item menu__link"}>Home</Link>
                                                        <Tab
                                                            style={{ marginLeft: 0, fontWeight: "200" }}
-                                                           className={`menu__item menu__link ${selectedTab == 0 ? "menu__link-active-mobile" : ""}`}>New</Tab>
+                                                           className={`menu__item menu__link ${selectedTab == 0 ? "menu__link-active-mobile" : ""}`}>New project</Tab>
                                                        <Tab
                                                            style={{ marginLeft: 0, fontWeight: "200" }}
                                                            className={`menu__item menu__link ${selectedTab == 1 ? "menu__link-active-mobile" : ""}`}>

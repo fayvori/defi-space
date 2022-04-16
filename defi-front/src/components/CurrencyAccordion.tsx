@@ -20,7 +20,7 @@ import VkIcon from '../assets/crm_images/src/vk-icon.svg'
 import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 
 import Collapsible from "react-collapsible";
-import {useEffect, useState} from "react";
+import {useCallback, useEffect, useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 
@@ -92,7 +92,9 @@ export const CurrencyAccordion = (props: any) => {
 
     const image = parseImageUrl(props.projInfo.image)
 
-    console.log(props.projInfo)
+    const callback = useCallback((value) => {
+        props.setTotalOfOpened(value)
+    }, [props.setTotalOfOpened])
 
     const close = () => {
         setIsOpen(false)
@@ -104,6 +106,8 @@ export const CurrencyAccordion = (props: any) => {
                 <div className="table">
                     <Collapsible
                         trigger={renderTrigger(isOpen, props.projInfo)}
+                        onOpen={() => callback((prev: number) => prev + 1)}
+                        onClose={() => callback((prev: number) => prev - 1)}
                         onOpening={() => setIsOpen(true)}
                         onClosing={() => setIsOpen(false)}
                         open={isOpen}
@@ -123,10 +127,7 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`79,357 ${props.projInfo.short_name}`}</span>
-                                        </div>
-                                        <div className="table__head-data">
-                                            <span className="text">$4,360</span>
+                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text">{`$${props.projInfo.price}`}</span>
@@ -135,7 +136,10 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">{`${props.projInfo.my_investment}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
+                                            <span className="text">{`79,357 ${props.projInfo.short_name}`}</span>
+                                        </div>
+                                        <div className="table__head-data">
+                                            <span className="text" style={{ whiteSpace: "pre-line" }}>{`${props.projInfo.vesting}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -268,22 +272,22 @@ export const CurrencyAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">Vesting</span>
+                                            <span className="title-col">TGE</span>
                                             <div className="content">
                                                 <span
-                                                    className="text text-subtitle">{`${props.projInfo.vesting}`}</span>
+                                                    className="text text-subtitle">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
-                                            <span className="title-col">TGE</span>
+                                            <span className="title-col">IDO</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.tge}`}</span>
+                                                <span className="text">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
-                                            <span className="title-col">IDO</span>
+                                            <span className="title-col">Value</span>
                                             <div className="content">
-                                                <span className="text">{props.projInfo.ido}</span>
+                                                <span className="text">$4,360</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data profit-col">

@@ -1,3 +1,17 @@
+import {useState} from "react";
+import {Link} from "react-router-dom";
+import {WalletConnectModal} from "../components/WalletConnectModal";
+import {Chart} from "../components/chart/Chart";
+import useAxios from "axios-hooks";
+import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
+import {ChartLabel} from "../components/chart/ChartLabel";
+import {parseImageUrl} from "../utils/utils";
+
+import '../js/app'
+import '../assets/css/App_crm.css'
+import '../assets/css/App.css'
+import '../assets/css/tabs.css'
+
 import DefiBanner from '../assets/images/src/main-section-img.png'
 import TokenPriceIcon from '../assets/images/src/token-price-icon.svg'
 import SatifyIcon from '../assets/images/src/safety-icon.svg'
@@ -6,38 +20,7 @@ import SvgEditorImage from '../assets/images/src/svg-editor-image.svg'
 import Arrow from '../assets/images/src/arrow.svg'
 import UsdtIcon from '../assets/images/src/usdt-icon.svg'
 import PoolIcon from '../assets/images/src/pool-icon.svg'
-import ChartImage from '../assets/images/src/chart-image.svg'
 import BurgerIcon from '../assets/images/src/burger.svg'
-
-import '../js/app'
-import '../assets/css/App_crm.css'
-import '../assets/css/App.css'
-import '../assets/css/tabs.css'
-
-
-import {Link} from "react-router-dom";
-
-// dummy charts and logos
-import CpollLogo from '../assets/images/src/company-logos/cpool-logo.png'
-import ErthaLogo from '../assets/images/src/company-logos/ertha-logo.png'
-import SidusLogo from '../assets/images/src/company-logos/sidus-logo.png'
-import SenateLogo from '../assets/images/src/company-logos/senate-logo.png'
-import VRLogo from '../assets/images/src/company-logos/vr-logo.png'
-import CWARLogo from '../assets/images/src/company-logos/cwar-logo.png'
-import {useState} from "react";
-import {WalletConnectModal} from "../components/WalletConnectModal";
-import WalletIcon from "../assets/crm_images/src/wallet-icon.svg";
-import {Chart} from "../components/chart/Chart";
-import useAxios from "axios-hooks";
-
-// without ts types
-// @ts-ignore
-// import {Tab, Tabs} from "react-tabify";
-
-import {Tab, Tabs, TabList, TabPanel} from 'react-tabs';
-
-import {ChartLabel} from "../components/chart/ChartLabel";
-import {parseImageUrl} from "../utils/utils";
 
 export const Home = () => {
     const [isConnectWalletModalVisible, setIsConnectWalletModalVisible] = useState(false)
