@@ -7082,15 +7082,44 @@ main {
 }
 
 .table-potfolio .table__body-main .table__main .vesting-col {
-    grid-area: vesting;
     -ms-grid-column: 5;
     -ms-grid-row: 1;
 }
 
-.table-potfolio .table__body-main .table__main .token-locked-col {
-    grid-area: token-locked;
-    -ms-grid-column: 6;
-    -ms-grid-row: 1;
+@media screen and (max-width: 1200px) {
+    .table-potfolio .table__body-main .table__main .vesting-col {
+        grid-area: next-unlock;
+        -ms-grid-column: 5;
+        -ms-grid-row: 1;
+    }
+
+    .table-potfolio .table__body-main .table__main .token-locked-col {
+        grid-area: token-locked;
+        -ms-grid-column: 6;
+        -ms-grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .table-potfolio .table__body-main .table__main .token-locked-col {
+        grid-area: vesting;
+        -ms-grid-column: 6;
+        -ms-grid-row: 1;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .table-potfolio .table__body-main .table__main .vesting-col {
+        grid-area: next-unlock;
+        -ms-grid-column: 5;
+        -ms-grid-row: 1;
+    }
+
+    .table-potfolio .table__body-main .table__main .token-locked-col {
+        grid-area: token-locked;
+        -ms-grid-column: 6;
+        -ms-grid-row: 1;
+    }
 }
 
 .table-potfolio .table__body-main .table__main .next-unlock-col {
@@ -7410,8 +7439,8 @@ main {
     border-radius: 1000%;
     bottom: -20px;
     left: -45px;
-    max-height: 205px;
-    max-width: 205px;
+    max-height: 190px;
+    max-width: 190px;
     -o-object-fit: cover;
     object-fit: cover;
     position: absolute;
@@ -8553,11 +8582,13 @@ main {
     }
 
     .table-potfolio .table__body-main .table__main .next-unlock-col {
+        grid-area: profit;
         -ms-grid-column: 3;
         -ms-grid-row: 3;
     }
 
     .table-potfolio .table__body-main .table__main .profit-col {
+        grid-area: vesting;
         -ms-grid-column: 5;
         -ms-grid-row: 3;
     }
@@ -8673,11 +8704,6 @@ main {
         margin-left: 15px;
     }
 
-    .table-potfolio .table__body-main .table__main .logo-company {
-        max-height: 170px;
-        max-width: 175px;
-    }
-
     .table-new .table__body-card .table__head {
         padding-left: 20px;
         padding-right: 20px;
@@ -8783,10 +8809,29 @@ main {
     }
 }
 
+@media screen and (min-width: 767px) and (max-width: 1000px) {
+    .table-potfolio .table__body-main .table__main .logo-company {
+        max-height: 120px;
+        max-width: 120px;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .table-potfolio .table__body-main .table__main .logo-company {
+        max-height: 150px;
+        max-width: 150px;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .navigation-bottom__left .menu__link {
         padding-left: 6px;
         padding-right: 6px;
+    }
+
+    .table-potfolio .table__body-main .table__main .logo-company {
+        max-height: 160px;
+        max-width: 160px;
     }
 
     .navigation-bottom__right .profit-info__title {
@@ -9187,6 +9232,7 @@ main {
     }
 
     .table-potfolio .table__body-main .table__main .profit-col {
+        grid-area: profit;
         -ms-grid-column: 5;
         -ms-grid-row: 9;
     }
@@ -10018,9 +10064,37 @@ main {
 }
 
 .margin-controls-history {
-    margin-right: 15px;
+    margin-right: 36px;
 }
 
 .margin-controls-portfolio {
     margin-right: 37px;
+}
+
+@media screen and (max-width: 767px) {
+    .table-potfolio .table__body-main .table__main .next-unlock-col {
+        grid-area: vesting;
+        -ms-grid-column: 3;
+        -ms-grid-row: 3;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .table-potfolio .table__body-main .table__main .next-unlock-col {
+        grid-area: next-unlock;
+        -ms-grid-column: 3;
+        -ms-grid-row: 3;
+    }
+
+    .table-potfolio .table__body-main .table__main .vesting-col {
+        grid-area: vesting;
+        -ms-grid-column: 3;
+        -ms-grid-row: 11;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1250px) {
+    .vesting-header {
+        font-size: 14px;
+    }
 }

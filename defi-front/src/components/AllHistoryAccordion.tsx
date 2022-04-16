@@ -21,6 +21,7 @@ import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 import Collapsible from "react-collapsible";
 import {useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 
 const renderTrigger = (isOpen: boolean, projInfo: any) => {
     const image = parseImageUrl(projInfo.image)
@@ -80,6 +81,7 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 }
 
 export const AllHistoryAccordion = (props: any) => {
+    const {width, height} = useWindowDimensions()
     const [isOpen, setIsOpen] = useState(false)
 
     // const image = parseImageUrl(props.projInfo.image)
@@ -150,7 +152,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`-`}</span>
+                                            <span className="text">{`${props.projInfo.entry_date}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text">{`$${props.projInfo.price}`}</span>
@@ -162,7 +164,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="text">{`-`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text" style={{ whiteSpace: "pre-line" }}>{`${props.projInfo.vesting}`}</span>
+                                            <span className="text vesting-header" style={{ whiteSpace: "pre-line" }}>{`${props.projInfo.vesting}`}</span>
                                         </div>
                                         <div className="table__head-data">
                                             <div className="controls">
@@ -179,33 +181,33 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data amount-col">
-                                            <span className="title-col">Amount</span>
+                                            <span className="title-col">Joining date</span>
                                             <div className="content">
-                                                <span className="text">{`-`}</span>
+                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data value-col">
-                                            <span className="title-col">Value</span>
-                                            <div className="content">
-                                                <span className="text">{`-`}</span>
-                                            </div>
-                                        </div>
-                                        <div className="table__main-data buy-price-col">
                                             <span className="title-col">Buy price</span>
                                             <div className="content">
                                                 <span className="text">{`$${props.projInfo.price}`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data vesting-top-col">
+                                        <div className="table__main-data buy-price-col">
                                             <span className="title-col">My investment</span>
                                             <div className="content">
                                                 <span className="text">{`-`}</span>
                                             </div>
                                         </div>
-                                        <div className="table__main-data tge-col">
-                                            <span className="title-col">Joining date</span>
+                                        <div className="table__main-data vesting-top-col">
+                                            <span className="title-col">Amount</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.entry_date}`}</span>
+                                                <span className="text">{`-`}</span>
+                                            </div>
+                                        </div>
+                                        <div className="table__main-data tge-col">
+                                            <span className="title-col">Vesting</span>
+                                            <div className="content">
+                                                <span className="text">{`${props.projInfo.vesting}`}</span>
                                             </div>
                                         </div>
 
@@ -213,6 +215,7 @@ export const AllHistoryAccordion = (props: any) => {
                                             <span className="title-col">Withdraw</span>
                                             <div className="content">
                                                 <div className="controls">
+                                                    <span className="text">-</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,12 +232,15 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data analysis-col">
-                                            <span className="title-col">&#8195;</span>
+                                            <span className="title-col">Analysis</span>
+                                            <div className="content">
+                                                <span className="text text-subtitle">-</span>
+                                            </div>
                                         </div>
                                         <div className="table__main-data vesting-col">
-                                            <span className="title-col">TGE</span>
+                                            <span className="title-col">IDO</span>
                                             <div className="content">
-                                                <span className="text text-subtitle">{`${props.projInfo.tge}`}</span>
+                                                <span className="text text-subtitle">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data next-unlock-col">
@@ -244,9 +250,9 @@ export const AllHistoryAccordion = (props: any) => {
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
-                                            <span className="title-col">IDO</span>
+                                            <span className="title-col">TGE</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.ido}`}</span>
+                                                <span className="text">{`${props.projInfo.tge}`}</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data profit-col">

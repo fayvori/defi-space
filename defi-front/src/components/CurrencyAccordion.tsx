@@ -85,7 +85,6 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 }
 
 export const CurrencyAccordion = (props: any) => {
-    const {width, height} = useWindowDimensions()
     const [isOpen, setIsOpen] = useState(false)
 
     const [percent, setPercent] = useState(60)
@@ -274,26 +273,26 @@ export const CurrencyAccordion = (props: any) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 400 ? "token-locked-col" : "vesting-col"}`}>
-                                            <span className="title-col">TGE</span>
-                                            <div className="content">
-                                                <span
-                                                    className="text text-subtitle">{`${props.projInfo.tge}`}</span>
-                                            </div>
-                                        </div>
-                                        <div className={`table__main-data ${width < 400 ? "ido-col" : "token-locked-col"}`}>
+                                        <div className={`table__main-data vesting-col`}>
                                             <span className="title-col">IDO</span>
                                             <div className="content">
-                                                <span className="text">{`${props.projInfo.ido}`}</span>
+                                                <span
+                                                    className="text text-subtitle">{`${props.projInfo.ido}`}</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 400 ? "next-unlock-col" : "ido-col"}`}>
+                                        <div className={`table__main-data token-locked-col`}>
+                                            <span className="title-col">TGE</span>
+                                            <div className="content">
+                                                <span className="text">{`${props.projInfo.tge}`}</span>
+                                            </div>
+                                        </div>
+                                        <div className={`table__main-data ido-col`}>
                                             <span className="title-col">Value</span>
                                             <div className="content">
                                                 <span className="text">$4,360</span>
                                             </div>
                                         </div>
-                                        <div className={`table__main-data ${width < 400 ? "profit-col" : "profit-col"}`}>
+                                        <div className={`table__main-data profit-col`}>
                                             <span className="title-col">Profit</span>
                                             <div className="content">
                                                 <span className="text text--accent">+ 375$</span>
