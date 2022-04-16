@@ -7141,6 +7141,13 @@ main {
     -ms-grid-row: 2;
 }
 
+@media screen and (min-width: 1200px) {
+    .table-potfolio .table__body-main .table__main .exchanges-col {
+        position: relative;
+        top: -20px;
+    }
+}
+
 .table-potfolio .table__body-main .table__main .socials-col {
     -ms-grid-row-span: 2;
     grid-area: socials;

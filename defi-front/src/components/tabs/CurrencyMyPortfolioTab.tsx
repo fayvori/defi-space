@@ -10,8 +10,6 @@ export const CurrencyMyPortfolioTab = () => {
         'https://backendapi.site/defi/defipool/portfolio/?format=json'
     )
 
-    console.log("total opened", totalOfOpened)
-
     if (loading) return <p></p>
     if (error) return <p>Error!</p>
 
