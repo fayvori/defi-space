@@ -19,7 +19,7 @@ import VkIcon from '../assets/crm_images/src/vk-icon.svg'
 import GitHubIcon from '../assets/crm_images/src/github-icon.svg'
 
 import Collapsible from "react-collapsible";
-import {useState} from "react";
+import {useCallback, useState} from "react";
 import {parseImageDebud, parseImageUrl} from "../utils/utils";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 
@@ -91,7 +91,9 @@ export const AllHistoryAccordion = (props: any) => {
         setIsOpen(false)
     }
 
-    console.log("exchanges", props.projInfo.exchanges)
+    const callback = useCallback((value) => {
+        props.setTotalOfOpened(value)
+    }, [props.setTotalOfOpened])
 
     return (
         <section className="table-potfolio table-section">
@@ -99,6 +101,8 @@ export const AllHistoryAccordion = (props: any) => {
                 <div className="table">
                     <Collapsible
                         trigger={renderTrigger(isOpen, props.projInfo)}
+                        onOpen={() => callback((prev: number) => prev + 1)}
+                        onClose={() => callback((prev: number) => prev - 1)}
                         onOpening={() => setIsOpen(true)}
                         onClosing={() => setIsOpen(false)}
                         open={isOpen}
