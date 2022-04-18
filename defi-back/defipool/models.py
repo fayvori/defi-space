@@ -2,16 +2,26 @@ from django.db import models
 
 
 class ExchangeModel(models.Model):
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, default="")
     image = models.ImageField(upload_to="defi_exchanges/")
     link = models.CharField(max_length=400)
+
+    class Meta:
+        verbose_name = "Биржи"
+        verbose_name_plural = "Биржи"
+
+    def __str__(self):
+        return self.name
 
 
 class InvestmentProjectModel(models.Model):
     name = models.CharField(max_length=255, unique=True)
+    # short_name = models.CharField(max_length=100)
     project_site = models.CharField(max_length=255)
     image = models.ImageField(upload_to="defi_projects/")
     description = models.TextField()
+    # round = models.CharField(max_length=100)
+    # price = models.FloatField()
     round = models.TextField()
     vesting = models.TextField()
     ido = models.TextField()
@@ -33,7 +43,7 @@ class InvestmentProjectModel(models.Model):
     class Meta:
         verbose_name = "Новый проект"
         verbose_name_plural = "Новый проект"
-
+        ordering = ('-id',)
 
 class MyPortfolioProjectModel(models.Model):
     name = models.CharField(max_length=255, unique=True)
@@ -71,6 +81,7 @@ class MyPortfolioProjectModel(models.Model):
     class Meta:
         verbose_name = "Портфолио"
         verbose_name_plural = "Портфолио"
+        ordering = ('-id',)
 
     def __str__(self):
         return self.name
@@ -89,6 +100,7 @@ class PreIDOHistoryModel(models.Model):
     class Meta:
         verbose_name = "Pre IDO"
         verbose_name_plural = "Pre IDO"
+        ordering = ('-id',)
 
     def __str__(self):
         return self.name

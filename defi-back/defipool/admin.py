@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel, ExchangeModel
+from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel, \
+    ExchangeModel
 
 admin.site.site_header = "Defi admin"
 
