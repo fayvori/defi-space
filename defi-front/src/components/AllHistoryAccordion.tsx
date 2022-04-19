@@ -2,10 +2,6 @@ import '../assets/css/App.css'
 import '../assets/css/App_crm.css'
 
 import PascalLogo from '../assets/crm_images/src/logo-cur-1.png'
-import PascalLogoBig from '../assets/crm_images/src/logo-cur-1-4x.png'
-import BinanceLogo from '../assets/crm_images/src/binange-icon.png'
-import SigenLogo from '../assets/crm_images/src/sigen.pro-icon.png'
-import HotbitLogo from '../assets/crm_images/src/hotbit-icon.png'
 
 // social icons
 import InstagramIcon from '../assets/crm_images/src/instagram-icon.svg'
@@ -67,7 +63,8 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                         display: "flex",
                                         alignItems: "center"
                                     }}>
-                                        <span className="text text--accent" style={{ color: "#34c759" }}>+ 27.2%</span>
+                                        {/*<span className="text text--accent" style={{ color: "#34c759" }}>+ 27.2%</span>*/}
+                                        <span className="text">-</span>
                                     </div>
                                     <button className="toggle-btn"></button>
                                 </div>
@@ -250,7 +247,7 @@ export const AllHistoryAccordion = (props: any) => {
                                         <div className="table__main-data next-unlock-col">
                                             <span className="title-col">Value</span>
                                             <div className="content">
-                                                <span className="text">$4,360</span>
+                                                <span className="text">-</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data token-locked-col">
@@ -262,7 +259,8 @@ export const AllHistoryAccordion = (props: any) => {
                                         <div className="table__main-data profit-col">
                                             <span className="title-col">Profit</span>
                                             <div className="content">
-                                                <span className="text text--accent">+ 27.2%</span>
+                                                {/*<span className="text text--accent">+ 27.2%</span>*/}
+                                                <span className="text">-</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data exchanges-col">

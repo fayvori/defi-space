@@ -4,9 +4,6 @@ import '../assets/css/circle-progress.css';
 import '../assets/css/custom-circleprogress.css'
 
 import PascalLogo from '../assets/crm_images/src/logo-cur-1.png'
-import BinanceLogo from '../assets/crm_images/src/binange-icon.png'
-import SigenLogo from '../assets/crm_images/src/sigen.pro-icon.png'
-import HotbitLogo from '../assets/crm_images/src/hotbit-icon.png'
 
 // social icons
 import InstagramIcon from '../assets/crm_images/src/instagram-icon.svg'
@@ -60,7 +57,8 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                 <span className="info-title">{`${projInfo.my_investment}`}</span>
                             </div>
                             <div className="table__head-data vesting-col">
-                                <span className="info-title">{`79,357 ${projInfo.short_name}`}</span>
+                                {/*<span className="info-title">{`79,357 ${projInfo.short_name}`}</span>*/}
+                                <span className="info-title">-</span>
                             </div>
                             <div className="table__head-data tge-col">
                                 <span className="info-title" style={{ whiteSpace: "pre-line" }}>{`${projInfo.vesting}`}</span>
@@ -71,7 +69,8 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
                                         display: "flex",
                                         alignItems: "center"
                                     }}>
-                                        <span className="text text--accent" style={{color: "#34c759"}}>+ 27.2%</span>
+                                        {/*<span className="text text--accent" style={{color: "#34c759"}}>+ 27.2%</span>*/}
+                                        <span className="text">-</span>
                                     </div>
                                     <button className="toggle-btn"></button>
                                 </div>
@@ -87,9 +86,9 @@ const renderTrigger = (isOpen: boolean, projInfo: any) => {
 export const CurrencyAccordion = (props: any) => {
     const [isOpen, setIsOpen] = useState(false)
 
-    const [percent, setPercent] = useState(60)
+    const [percent, setPercent] = useState(0)
     const [tokensInProject, setTokensInProject] = useState(8000)
-    const [tokensReceive, setTokensReceive] = useState(2000)
+    const [tokensReceive, setTokensReceive] = useState(0)
 
     const image = parseImageUrl(props.projInfo.image)
 
@@ -137,7 +136,8 @@ export const CurrencyAccordion = (props: any) => {
                                             <span className="text">{`${props.projInfo.my_investment}`}</span>
                                         </div>
                                         <div className="table__head-data">
-                                            <span className="text">{`79,357 ${props.projInfo.short_name}`}</span>
+                                            {/*<span className="text">{`79,357 ${props.projInfo.short_name}`}</span>*/}
+                                            <span className="text">-</span>
                                         </div>
                                         <div className="table__head-data">
                                             <span className="text"
@@ -183,8 +183,8 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className="table__main-data vesting-top-col">
                                             <span className="title-col">Amount</span>
                                             <div className="content">
-                                                <span
-                                                    className="text">{`79,357 ${props.projInfo.short_name}`}</span>
+                                                {/*<span className="text">{`79,357 ${props.projInfo.short_name}`}</span>*/}
+                                                <span className="text">-</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data tge-col">
@@ -255,7 +255,7 @@ export const CurrencyAccordion = (props: any) => {
                                                     <CircularProgressbarWithChildren value={percent}>
                                                         <div>Remainder</div>
                                                         <div>
-                                                            <h4 style={{color: "#FFF"}}>{percent}%</h4>
+                                                            <h4 style={{color: "#FFF"}}>100%</h4>
                                                         </div>
                                                     </CircularProgressbarWithChildren>
                                                 </div>
@@ -289,14 +289,16 @@ export const CurrencyAccordion = (props: any) => {
                                         <div className={`table__main-data ido-col`}>
                                             <span className="title-col">Value</span>
                                             <div className="content">
-                                                <span className="text">$4,360</span>
+                                                <span className="text">-</span>
                                             </div>
                                         </div>
                                         <div className={`table__main-data profit-col`}>
                                             <span className="title-col">Profit</span>
                                             <div className="content">
-                                                <span className="text text--accent">+ 375$</span>
-                                                <span className="text text--accent">+ 27.2%</span>
+                                                {/*<span className="text text--accent">+ 375$</span>*/}
+                                                {/*<span className="text text--accent">+ 27.2%</span>*/}
+
+                                                <span className="text">-</span>
                                             </div>
                                         </div>
                                         <div className="table__main-data exchanges-col">
