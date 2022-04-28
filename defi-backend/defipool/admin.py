@@ -6,7 +6,7 @@ admin.site.site_header = "Defi admin"
 
 
 @admin.register(MyPortfolioProjectModel)
-class ProjectAdmin(admin.ModelAdmin):
+class MyPortfolioProjectAdmin(admin.ModelAdmin):
     fieldsets = (
         ("Новый проект", {
             'fields': ('name', 'short_name', 'project_site', 'image', 'round', 'vesting', 'ido', 'investors',
@@ -14,7 +14,7 @@ class ProjectAdmin(admin.ModelAdmin):
         }),
 
         ("Дополнительные поля для портфолио", {
-            'fields': ('my_investment', 'price', 'blockchain', 'entry_date', 'tge', 'seen_in_new_project',
+            'fields': ('my_investment', 'price', 'blockchain', 'entry_date', 'tge', 'seen_in_portfolio_and_history',
                        'exchanges', 'total_coins')
         }),
         ("Социальные сети", {
