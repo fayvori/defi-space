@@ -34,7 +34,7 @@ class MyPortfolioProjectModel(models.Model):
     info = models.TextField(verbose_name='Описание / Информация о монете')
     entry_date = models.TextField(verbose_name='Дата входа')
     tge = models.TextField()
-    seen_in_new_project = models.BooleanField(default=True, verbose_name='Отображать во вкладке "Новый проект"')
+    seen_in_portfolio_and_history = models.BooleanField(default=False, verbose_name='Отображать во вкладках "Портфолио" и "История"')
     exchanges = models.ManyToManyField(ExchangeModel, blank=True, verbose_name='Биржи')
     total_coins = models.IntegerField(default=0, verbose_name='Количество монет')
 
