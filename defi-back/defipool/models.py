@@ -2,9 +2,9 @@ from django.db import models
 
 
 class ExchangeModel(models.Model):
-    name = models.CharField(max_length=200, default="")
-    image = models.ImageField(upload_to="defi_exchanges/")
-    link = models.CharField(max_length=400)
+    name = models.CharField(max_length=200, default="", verbose_name='Имя биржи')
+    image = models.ImageField(upload_to="defi_exchanges/", verbose_name='Изображение')
+    link = models.CharField(max_length=400, verbose_name='Ссылка')
 
     class Meta:
         verbose_name = "Биржи"
@@ -14,73 +14,47 @@ class ExchangeModel(models.Model):
         return self.name
 
 
-class InvestmentProjectModel(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    # short_name = models.CharField(max_length=100)
-    project_site = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="defi_projects/")
-    description = models.TextField()
-    # round = models.CharField(max_length=100)
-    # price = models.FloatField()
-    round = models.TextField()
-    vesting = models.TextField()
-    ido = models.TextField()
-    investors = models.TextField()
-    pool_address = models.CharField(max_length=255, default="0x04d217b5f603e779fd25eb28c3f22bfb11491628")
-    instagram_link = models.CharField(max_length=255, default="-")
-    facebook_link = models.CharField(max_length=255, default="-")
-    telegram_link = models.CharField(max_length=255, default="-")
-    twitter_link = models.CharField(max_length=255, default="-")
-    youtube_link = models.CharField(max_length=255, default="-")
-    discord_link = models.CharField(max_length=255, default="-")
-    github_link = models.CharField(max_length=255, default="-")
-    linkedin_link = models.CharField(max_length=255, default="-")
-    vk_link = models.CharField(max_length=255, default="-")
-
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name = "Новый проект"
-        verbose_name_plural = "Новый проект"
-        ordering = ('-id',)
-
 class MyPortfolioProjectModel(models.Model):
-    name = models.CharField(max_length=255, unique=True)
-    short_name = models.CharField(max_length=100)
-    price = models.FloatField()
-    my_investment = models.TextField()
-    vesting = models.TextField()
-    blockchain = models.CharField(max_length=100)
-    info = models.TextField()
-    entry_date = models.TextField()
-    tge = models.TextField()
-    ido = models.TextField()
-    image = models.ImageField(upload_to="defi_projects/")
-    project_site = models.CharField(max_length=255)
-    exchanges = models.ManyToManyField(ExchangeModel, blank=True)
-
-    pool_address = models.CharField(max_length=400, default="")
-    claim_address = models.CharField(max_length=400, default="")
-    claim_network = models.CharField(max_length=400, default="")
+    name = models.CharField(max_length=255, unique=True, verbose_name='Имя монеты')
+    short_name = models.CharField(max_length=100, verbose_name='Короткое имя монеты')
+    project_site = models.CharField(max_length=255, verbose_name='Сайт монеты')
+    image = models.ImageField(upload_to="defi_projects/", verbose_name='Изображение')
+    price = models.FloatField(verbose_name='Цена')
+    round = models.TextField(verbose_name='Раунд')
+    vesting = models.TextField(verbose_name='Вестинг')
+    ido = models.TextField(verbose_name='ido')
+    investors = models.TextField(verbose_name='Инвестроры')
+    pool_address = models.CharField(max_length=400, default="-")
+    claim_address = models.CharField(max_length=400, default="-")
+    claim_network = models.CharField(max_length=400, default="-")
     cmc_id = models.IntegerField(default=0)
-    instagram_link = models.CharField(max_length=255, default="-")
-    facebook_link = models.CharField(max_length=255, default="-")
-    telegram_link = models.CharField(max_length=255, default="-")
-    twitter_link = models.CharField(max_length=255, default="-")
-    youtube_link = models.CharField(max_length=255, default="-")
-    discord_link = models.CharField(max_length=255, default="-")
-    github_link = models.CharField(max_length=255, default="-")
-    linkedin_link = models.CharField(max_length=255, default="-")
-    vk_link = models.CharField(max_length=255, default="-")
+
+    my_investment = models.TextField(verbose_name='Мои инвестиции')
+    blockchain = models.CharField(max_length=100)
+    info = models.TextField(verbose_name='Описание / Информация о монете')
+    entry_date = models.TextField(verbose_name='Дата входа')
+    tge = models.TextField()
+    seen_in_new_project = models.BooleanField(default=True, verbose_name='Отображать во вкладке "Новый проект"')
+    exchanges = models.ManyToManyField(ExchangeModel, blank=True, verbose_name='Биржи')
+    total_coins = models.IntegerField(default=0, verbose_name='Количество монет')
+
+    instagram_link = models.CharField(max_length=255, default="-", verbose_name='Инстаграм')
+    facebook_link = models.CharField(max_length=255, default="-", verbose_name='Фейсбук')
+    telegram_link = models.CharField(max_length=255, default="-", verbose_name='Телеграм')
+    twitter_link = models.CharField(max_length=255, default="-", verbose_name='Твиттер')
+    youtube_link = models.CharField(max_length=255, default="-", verbose_name='Ютуб')
+    discord_link = models.CharField(max_length=255, default="-", verbose_name='Дискорд')
+    github_link = models.CharField(max_length=255, default="-", verbose_name='Гитхаб')
+    linkedin_link = models.CharField(max_length=255, default="-", verbose_name='Линкедлн')
+    vk_link = models.CharField(max_length=255, default="-", verbose_name='Вконтакте')
 
     dex_url = models.CharField(max_length=400, default="-")
     live_chat_url = models.CharField(max_length=400, default="-")
     scan_url = models.CharField(max_length=400, default="-")
 
     class Meta:
-        verbose_name = "Портфолио"
-        verbose_name_plural = "Портфолио"
+        verbose_name = "Проекты"
+        verbose_name_plural = "Проекты"
         ordering = ('-id',)
 
     def __str__(self):

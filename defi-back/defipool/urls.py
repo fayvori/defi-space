@@ -15,13 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from .viewsets import InvestmentProjectViewSet, PreIDOHistoryViewSet, MyPortfolioViewSet
+from .viewsets import PreIDOHistoryViewSet, MyPortfolioViewSet
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
-router.register(r'defipool/projects', InvestmentProjectViewSet)
 router.register(r'defipool/preido_history', PreIDOHistoryViewSet)
 router.register(r'defipool/portfolio', MyPortfolioViewSet)
 

@@ -1,6 +1,6 @@
-from .models import InvestmentProjectModel, PreIDOHistoryModel, MyPortfolioProjectModel, \
-    ExchangeModel
 from rest_framework import serializers
+from .models import PreIDOHistoryModel, MyPortfolioProjectModel, \
+    ExchangeModel
 
 
 class PreIDOHistorySerializer(serializers.ModelSerializer):
@@ -13,12 +13,6 @@ class ExchangeSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExchangeModel
         fields = ['image', 'link']
-
-
-class InvestmentProjectSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = InvestmentProjectModel
-        fields = '__all__'
 
 
 class MyPortfolioProjectModelSerialzier(serializers.ModelSerializer):
